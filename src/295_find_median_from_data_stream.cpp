@@ -1,3 +1,8 @@
+//
+// Created by Nevin Zheng on 7/12/21.
+//
+
+#include <catch2/catch.hpp>
 #include <iostream>
 #include <queue>
 
@@ -33,27 +38,53 @@
  * complexity would vary but it would be really close to the table.
  */
 
-#include "295_find_median_from_data_stream.hpp"
+//
+// Created by Nevin Zheng on 7/12/21.
+//
 
-void MedianFinder::addNum(int num) {
-    // Push into the correct heap
-    num <= findMedian() ? lo.push(num) : hi.push(num);
+#pragma once
 
-    if (lo.size() > hi.size() && lo.size() - hi.size() > 1) {
-        hi.push(lo.top());
-        lo.pop();
-    } else if (hi.size() > lo.size()) {
-        lo.push(hi.top());
-        hi.pop();
+#include <queue>
+
+
+using MaxHeap = std::priority_queue<int>;
+using MinHeap = std::priority_queue<int, std::vector<int>, std::greater<>>;
+
+
+class MedianFinder {
+public:
+    MaxHeap lo;
+    MinHeap hi;
+
+    void addNum(int num) {
+        // Push into the correct heap
+        num <= findMedian() ? lo.push(num) : hi.push(num);
+
+        if (lo.size() > hi.size() && lo.size() - hi.size() > 1) {
+            hi.push(lo.top());
+            lo.pop();
+        } else if (hi.size() > lo.size()) {
+            lo.push(hi.top());
+            hi.pop();
+        }
     }
-}
 
-double MedianFinder::findMedian() const {
-    if (lo.empty() && hi.empty()) {// Both Empty, return 0
-        return 0;
-    } else if (lo.size() == hi.size()) {// Even Parity
-        return (lo.top() + hi.top()) / 2.;
-    } else {// Else, lo.top() is median, guaranteed by invariant
-        return lo.top();
+    double findMedian() const {
+        if (lo.empty() && hi.empty()) {// Both Empty, return 0
+            return 0;
+        } else if (lo.size() == hi.size()) {// Even Parity
+            return (lo.top() + hi.top()) / 2.;
+        } else {// Else, lo.top() is median, guaranteed by invariant
+            return lo.top();
+        }
     }
+};
+
+TEST_CASE("test_295_example_1") {
+    MedianFinder mf;
+    mf.addNum(1);
+    mf.addNum(2);
+    REQUIRE(mf.findMedian() == 1.5);
+    mf.addNum(3);
+    REQUIRE(mf.findMedian() == 2.0);
 }

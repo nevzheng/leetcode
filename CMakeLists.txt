@@ -10,7 +10,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=undefined -g")
 # Integrate Catch2 Testing Lib
 find_package(Catch2 REQUIRED)
 
-include_directories(include)
-
 add_subdirectory(src)
-add_subdirectory(test)
