@@ -20,6 +20,10 @@
  * If the number of elements is even, and the invariant is maintain we can just return
  * the value a top the max heap. Otherwise we can return the average.
  *
+ * addNum: O(lg(n)) time
+ * findMedian :O(1) time
+ * O(n) space for two heaps
+ *
  * Follow Ups:
  * If all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
  * We can switch our data type to uint8_t, which will save memory.
