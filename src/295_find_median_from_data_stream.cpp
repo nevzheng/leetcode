@@ -1,9 +1,6 @@
-#define CATCH_CONFIG_MAIN
-
 #include <iostream>
 #include <queue>
 
-#include <catch2/catch.hpp>
 /*
  * We will use priority queues to find the median in constant time, at the cost of O(log n) insertion
  * To do this we will maintain a Max heap containing elements less than the median
@@ -36,45 +33,27 @@
  * complexity would vary but it would be really close to the table.
  */
 
-using MaxHeap = std::priority_queue<int>;
-using MinHeap = std::priority_queue<int, std::vector<int>, std::greater<>>;
+#include "295_find_median_from_data_stream.hpp"
 
-class MedianFinder {
-public:
-    MaxHeap lo;
-    MinHeap hi;
-    /** initialize your data structure here. */
-    MedianFinder() = default;
+void MedianFinder::addNum(int num) {
+    // Push into the correct heap
+    num <= findMedian() ? lo.push(num) : hi.push(num);
 
-    void addNum(int num) {
-        // Push into the correct heap
-        num <= findMedian() ? lo.push(num) : hi.push(num);
-
-        if (lo.size() > hi.size() && lo.size() - hi.size() > 1) {
-            hi.push(lo.top());
-            lo.pop();
-        } else if (hi.size() > lo.size()) {
-            lo.push(hi.top());
-            hi.pop();
-        }
+    if (lo.size() > hi.size() && lo.size() - hi.size() > 1) {
+        hi.push(lo.top());
+        lo.pop();
+    } else if (hi.size() > lo.size()) {
+        lo.push(hi.top());
+        hi.pop();
     }
+}
 
-    double findMedian() const {
-        if (lo.empty() && hi.empty()) {// Both Empty, return 0
-            return 0;
-        } else if (lo.size() == hi.size()) {// Even Parity
-            return (lo.top() + hi.top()) / 2.;
-        } else {// Else, lo.top() is median, guaranteed by invariant
-            return lo.top();
-        }
+double MedianFinder::findMedian() const {
+    if (lo.empty() && hi.empty()) {// Both Empty, return 0
+        return 0;
+    } else if (lo.size() == hi.size()) {// Even Parity
+        return (lo.top() + hi.top()) / 2.;
+    } else {// Else, lo.top() is median, guaranteed by invariant
+        return lo.top();
     }
-};
-
-TEST_CASE("295_example_1") {
-    MedianFinder mf;
-    mf.addNum(1);
-    mf.addNum(2);
-    REQUIRE(mf.findMedian() == 1.5);
-    mf.addNum(3);
-    REQUIRE(mf.findMedian() == 2.0);
 }
