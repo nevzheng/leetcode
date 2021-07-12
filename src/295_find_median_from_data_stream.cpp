@@ -1,5 +1,9 @@
+#define CATCH_CONFIG_MAIN
+
 #include <iostream>
 #include <queue>
+
+#include <catch2/catch.hpp>
 /*
  * We will use priority queues to find the median in constant time, at the cost of O(log n) insertion
  * To do this we will maintain a Max heap containing elements less than the median
@@ -62,13 +66,11 @@ public:
     }
 };
 
-int main() {
+TEST_CASE("295_example_1") {
     MedianFinder mf;
     mf.addNum(1);
     mf.addNum(2);
-    std::cout << mf.findMedian() << '\n';
+    REQUIRE(mf.findMedian() == 1.5);
     mf.addNum(3);
-    std::cout << mf.findMedian() << '\n';
-
-    return 0;
+    REQUIRE(mf.findMedian() == 2.0);
 }
