@@ -1,6 +1,14 @@
 add_executable(tests
+        22_generate_parentheses.cpp
+        114_flatten_binary_tree_to_linked_list.cpp
+        162_find_peak_element.cpp
         205_isomorphic_strings.cpp
+        207_course_schedule.cpp
+        210_course_schedule_ii.cpp
         295_find_median_from_data_stream.cpp
+        347_top_k_frequent_elements.cpp
+        886_possible_bipartition.cpp
+        1462_course_schedule_iv.cpp
 
         main.cpp
         )
