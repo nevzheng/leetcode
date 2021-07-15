@@ -7,6 +7,9 @@ add_executable(tests
         210_course_schedule_ii.cpp
         295_find_median_from_data_stream.cpp
         347_top_k_frequent_elements.cpp
+        611_valid_triangle_number.cpp
+        787_cheapest_flights_within_k_stops.cpp
+        814_binary_tree_pruning.cpp
         886_possible_bipartition.cpp
         1462_course_schedule_iv.cpp
 
