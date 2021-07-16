@@ -13,6 +13,7 @@ add_executable(tests
         814_binary_tree_pruning.cpp
         886_possible_bipartition.cpp
         1462_course_schedule_iv.cpp
+        1669_merge_inbetween_linked_lists.cpp
 
         main.cpp
         )
