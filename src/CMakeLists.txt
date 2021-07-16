@@ -1,4 +1,5 @@
 add_executable(tests
+        1_two_sum.cpp
         22_generate_parentheses.cpp
         114_flatten_binary_tree_to_linked_list.cpp
         162_find_peak_element.cpp
