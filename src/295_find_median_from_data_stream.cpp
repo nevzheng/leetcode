@@ -41,9 +41,6 @@
 //
 // Created by Nevin Zheng on 7/12/21.
 //
-
-#pragma once
-
 #include <queue>
 
 
