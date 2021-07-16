@@ -37,7 +37,7 @@ bool checkResult(ListNode *head, vector<int> expected) {
     return true;
 }
 
-TEST_CASE("1669_example1") {
+TEST_CASE("1669_example1", "[1669]") {
     auto l1 = {0, 1, 2, 3, 4, 5};
     auto a = 3;
     auto b = 4;
@@ -45,8 +45,8 @@ TEST_CASE("1669_example1") {
     auto expected = {0, 1, 2, 1000000, 1000001, 1000002, 5};
     auto list1 = makeList(l1);
     auto list2 = makeList(l2);
-//    printList(list1);
-//    printList(list2);
+    //    printList(list1);
+    //    printList(list2);
 
     auto result = mergeInBetween(list1, a, b, list2);
     REQUIRE(checkResult(result, expected));

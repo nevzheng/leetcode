@@ -44,14 +44,14 @@ int findPeakElement(const vector<int> &A) {
 // because the arrays are sorted, we can then apply a binary search
 // our predicate is A[mid] > A[mi+1], OR If our mid point is greater than the next element, i.e. the inversion hasn't happened
 
-TEST_CASE("test_162_example_1") {
+TEST_CASE("test_162_example_1", "[162]") {
     vector<int> v = {1, 2, 1, 3, 5, 6, 4};
     int peakElement = findPeakElement(v);
     bool result = peakElement == 1 || peakElement == 5;
     REQUIRE(result);
 }
 
-TEST_CASE("test_162_example_2") {
+TEST_CASE("test_162_example_2", "[162]") {
     vector<int> v = {1, 2, 3, 1};
     int peakElement = findPeakElement(v);
     bool result = peakElement == 2;

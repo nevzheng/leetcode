@@ -48,7 +48,7 @@ vector<int> findOrder(int numCourses, const Matrix &prerequisites) {
     return topSort;
 }
 
-TEST_CASE("210_example1") {
+TEST_CASE("210_example1", "[210]") {
     int numCourses = 4;
     Matrix prerequisites = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
     vector<int> expected = {0, 2, 1, 3};// OR 0,2,1,3

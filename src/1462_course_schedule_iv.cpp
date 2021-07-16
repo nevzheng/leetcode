@@ -39,13 +39,13 @@ vector<bool> checkIfPrerequisite(int numCourses,
     utils::printVector(topSort);
     vector<bool> responses;
     responses.reserve(queries.size());
-    for(const auto x: queries){
-
+    for (const auto x : queries) {
     }
     return responses;
 }
 
-TEST_CASE("1462_example1") {
+//TODO Solve 1462
+TEST_CASE("1462_example1", "1462") {
     auto numCourses = 2;
     Matrix prerequisites = {{1, 0}};
     Matrix queries = {{0, 1}, {1, 0}};

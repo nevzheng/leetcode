@@ -25,13 +25,13 @@ vector<string> generateParenthesis(int n) {
 }
 
 
-TEST_CASE("22_example1") {
+TEST_CASE("22_example1", "[22]") {
     auto input = 3;
     auto result = generateParenthesis(input);
     vector<string> correct = {"((()))", "(()())", "(())()", "()(())", "()()()"};
     REQUIRE(result == correct);
 }
-TEST_CASE("22_example2") {
+TEST_CASE("22_example2", "[22]") {
     auto input = 1;
     auto result = generateParenthesis(input);
     vector<string> correct = {"()"};

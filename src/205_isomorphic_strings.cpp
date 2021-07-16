@@ -29,7 +29,7 @@ bool isIsomorphic(string s, string t) {
     return true;
 }
 
-TEST_CASE("test_205_example_1") {
+TEST_CASE("test_205_example_1", "[205]") {
     REQUIRE(isIsomorphic("egg", "add") == true);
     REQUIRE(isIsomorphic("foo", "bar") == false);
     REQUIRE(isIsomorphic("paper", "title") == true);

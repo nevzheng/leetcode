@@ -77,7 +77,7 @@ public:
     }
 };
 
-TEST_CASE("test_295_example_1") {
+TEST_CASE("test_295_example_1", "[295]") {
     MedianFinder mf;
     mf.addNum(1);
     mf.addNum(2);

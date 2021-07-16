@@ -45,13 +45,13 @@ int triangleNumber(vector<int> A) {
 }
 
 
-TEST_CASE("611_example1") {
+TEST_CASE("611_example1", "[611]") {
     vector<int> nums = {2, 2, 3, 4};
     auto count = 3;
     REQUIRE(triangleNumber(nums) == count);
 }
 
-TEST_CASE("611_example2") {
+TEST_CASE("611_example2", "[611]") {
     vector<int> nums = {1};
     auto count = 0;
     REQUIRE(triangleNumber(nums) == count);

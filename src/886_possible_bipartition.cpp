@@ -121,7 +121,7 @@ public:
         for (auto start = 0; start < n; start++) {
             if (colors[start] == Color::None) {
                 result &= colorGraph(adjList, n, colors, start);
-                if(!result) return false;
+                if (!result) return false;
             }
             printVector(colors);
         }
@@ -129,7 +129,7 @@ public:
     }
 };
 
-TEST_CASE("886_example1") {
+TEST_CASE("886_example1", "[886]") {
     Solution sol;
     Matrix v{{1, 2}, {1, 3}, {2, 4}};
     auto n = 4;
@@ -137,7 +137,7 @@ TEST_CASE("886_example1") {
 }
 
 // This Graph is disconnected so we have to make sure that we explore all components
-TEST_CASE("886_example2") {
+TEST_CASE("886_example2", "[886]") {
     Solution sol;
     Matrix v{{1, 2}, {3, 4}, {4, 5}, {3, 5}};
     int n = 5;

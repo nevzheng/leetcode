@@ -27,7 +27,7 @@ vector<int> topKFrequent(vector<int> &nums, int k) {
     return vector(rbegin(v), rbegin(v) + k);
 }
 
-TEST_CASE("test_347_example_1") {
+TEST_CASE("test_347_example_1", "[347]") {
     vector<int> v = {1, 1, 1, 2, 2, 3};
     vector<int> r = {1, 2};
     REQUIRE(topKFrequent(v, 2) == r);

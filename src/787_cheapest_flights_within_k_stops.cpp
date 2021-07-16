@@ -80,7 +80,7 @@ int findCheapestPrice(int n, const vector<vector<int>> &flights, int src, int ds
 }
 
 
-TEST_CASE("787_example1") {
+TEST_CASE("787_example1", "[787]") {
     auto n = 3;
     Matrix flights = {{0, 1, 100}, {1, 2, 100}, {0, 2, 500}};
     auto src = 0;
@@ -90,7 +90,7 @@ TEST_CASE("787_example1") {
     REQUIRE(findCheapestPrice(n, flights, src, dst, k) == expected);
 }
 
-TEST_CASE("787_example2") {
+TEST_CASE("787_example2", "[787]") {
     auto n = 3;
     Matrix flights = {{0, 1, 100}, {1, 2, 100}, {0, 2, 500}};
     auto src = 0;
