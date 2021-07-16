@@ -17,13 +17,30 @@ using namespace std;
 // However there is another interesting solution that we can apply now that the list is sorted.
 // We iterate over the array. For each i, A[i] we can use binary search to search for the complement
 // tgt - A[i] in the range A[i+1:]
-vector<int> twoSumSorted(const vector<int> &A, int tgt) {
+// This is O(nlgn) time and O(1) space
+vector<int> twoSumSortedBinarySearch(const vector<int> &A, int tgt) {
     for (auto it = begin(A); it != end(A); it++) {
         auto comp = tgt - *it;// Complement of it
         if (auto jt = lower_bound(it + 1, end(A), comp); jt != end(A) and *jt == comp) {
             int idx = (int) distance(begin(A), it) + 1;
             int jdx = (int) distance(begin(A), jt) + 1;
             return {idx, jdx};
+        }
+    }
+    return {};
+}
+// This is an O(n) solution which is strictly better than Binary search
+vector<int> twoSumSorted(const vector<int> &A, int tgt) {
+    int N = A.size();
+    int lo(0), hi(N - 1);
+    while (lo < hi) {
+        int sum = A[lo] + A[hi];
+        if (sum == tgt) {
+            return {lo + 1, hi + 1};
+        } else if (sum > tgt) {
+            hi--;
+        } else {
+            lo++;
         }
     }
     return {};
