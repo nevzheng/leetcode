@@ -1,8 +1,10 @@
 add_executable(tests
         1_two_sum.cpp
+        15_3_sum.cpp
         22_generate_parentheses.cpp
         114_flatten_binary_tree_to_linked_list.cpp
         162_find_peak_element.cpp
+        167_two_sum_2.cpp
         205_isomorphic_strings.cpp
         207_course_schedule.cpp
         210_course_schedule_ii.cpp
@@ -15,6 +17,7 @@ add_executable(tests
         1462_course_schedule_iv.cpp
         1669_merge_inbetween_linked_lists.cpp
 
+        utils.cpp
         main.cpp
         )
 
