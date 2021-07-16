@@ -50,7 +50,7 @@ vector<vector<int>> fourSumQuartic(vector<int> &A, int tgt) {
  * @param tgt
  * @return
  */
-vector<vector<int>> fourSum(vector<int> &A, int tgt) {
+vector<vector<int>> fourSumFlat(vector<int> &A, int tgt) {
     auto N = A.size();
     if (N < 4) return {};
     sort(begin(A), end(A));// O(nlgn) , O(1);
@@ -78,6 +78,50 @@ vector<vector<int>> fourSum(vector<int> &A, int tgt) {
     return res;
 }
 
+/**
+ * Search for two numbers that sum to target in the Sorted Array A between start and end
+ * @param A
+ * @param start
+ * @param hi
+ * @param tgt
+ * @return
+ */
+vector<vector<int>> twoSum(const vector<int> &A, int start, int tgt) {
+    vector<vector<int>> result;
+    int end = A.size() - 1;
+    while (start < end) {
+        if (auto sum = A[start] + A[end]; sum < tgt) {
+            start++;
+        } else if (sum > tgt) {
+            end--;
+        } else {
+            result.push_back({A[start], A[end]});
+            start++;
+            while (start < end and A[start - 1] == A[start]) start++;
+        }
+    }
+    return result;
+}
+
+vector<vector<int>> kSum(const vector<int> &A, int tgt, int start, int k) {
+    if (k == 2) { return twoSum(A, start, tgt); }// Base Case Return twoSum
+
+    vector<vector<int>> kList;
+    for (auto i = start; i < A.size() - k + 1; i++) {
+        if (i > start and A[i - 1] == A[i]) continue;// Skip Processing Duplicate elements
+        for (auto &v : kSum(A, tgt - A[i], i + 1, k - 1)) {
+            v.insert(begin(v), A[i]);// Could improve efficiency
+            kList.push_back(v);
+        }
+    }
+    return kList;
+}
+
+vector<vector<int>> fourSum(vector<int> &A, int tgt) {
+    if (A.size() < 4) return {};
+    sort(begin(A), end(A));
+    return kSum(A, tgt, 0, 4);
+}
 
 TEST_CASE("18ex1", "[18]") {
     vector<int> nums = {1, 0, -1, 0, -2, 2};
