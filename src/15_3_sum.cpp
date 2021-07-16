@@ -114,30 +114,36 @@ vector<vector<int>> threeSumPass318(vector<int> &A) {
 }
 
 /**
- * In this version, we'll first sort the array at a cost of nlgn. (could be a counting or bucket sort for O(n) complexity))
- * Then We'll use a double for Loop to fix the first two indices i and j
- * We can then use a binary search to look for the third index in the range A[j+1:]
- * This will run in nlgn + n^2 lg n time = n^2 lg n. 317/318 cases passed, but there was one really degenerate case in #318 below.
- *
- * To Resolve this issue. We need some kind of "Skip Duplicate Values Mechanism". To Do This, We'll switch to using a while loop with
- * two iterators. After processing a pair, we check if the pair point to equal values. If they do, we use binary search to skip ahead
- * In
+ * First we will sort the array in nlgn time
+ * Then we will fix the values of i then use the two pointer approach from two sum to find values of j and k.
+ * In order to ignore duplicates we will need to skip duplicate values of i j once they have been processed
  * @param A
  * @return
  */
 vector<vector<int>> threeSum(vector<int> &A) {
     auto N = A.size();
     if (N < 3) return {};
-    // Assume we can modify A to avoid a copy;
     sort(begin(A), end(A));
-
     vector<vector<int>> res;
-
-
-
-
+    for (auto i = 0; i < N; i++) {
+        if (i > 0 and A[i - 1] == A[i]) { continue; }
+        auto j = i + 1;
+        auto k = N - 1;
+        while (j < k) {
+            if (auto sum = A[i] + A[j] + A[k]; sum < 0) {
+                j++;
+            } else if (sum > 0) {
+                k--;
+            } else {
+                res.push_back({A[i], A[j], A[k]});
+                j++;
+                while (j < k and A[j - 1] == A[j]) j++;
+            }
+        }
+    }
     return res;
 }
+
 
 TEST_CASE("15_ex1", "[15]") {
     auto nums = vector{-1, 0, 1, 2, -1, -4};
