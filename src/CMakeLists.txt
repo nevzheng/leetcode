@@ -22,7 +22,7 @@ add_executable(tests
 
         utils.cpp
         main.cpp
-        )
+        41_first_missing_positive.cpp)
 find_package(fmt)
 
 target_link_libraries(tests PRIVATE Catch2::Catch2)
