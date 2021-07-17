@@ -19,11 +19,13 @@ add_executable(tests
         787_cheapest_flights_within_k_stops.cpp
         814_binary_tree_pruning.cpp
         886_possible_bipartition.cpp
+        927_three_equal_parts.cpp
         1462_course_schedule_iv.cpp
         1669_merge_inbetween_linked_lists.cpp
 
         utils.cpp
-        main.cpp)
+        main.cpp
+        )
 find_package(fmt)
 
 target_link_libraries(tests PRIVATE Catch2::Catch2)
