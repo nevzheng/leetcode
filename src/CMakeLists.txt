@@ -1,6 +1,7 @@
 add_executable(tests
         1_two_sum.cpp
         15_3_sum.cpp
+        17_letter_combinations_of_a_phone_number.cpp
         18_4_sum.cpp
         22_generate_parentheses.cpp
         114_flatten_binary_tree_to_linked_list.cpp
