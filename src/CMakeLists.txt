@@ -22,8 +22,10 @@ add_executable(tests
         utils.cpp
         main.cpp
         )
+find_package(fmt)
 
 target_link_libraries(tests PRIVATE Catch2::Catch2)
+target_link_libraries(tests PRIVATE fmt::fmt)
 
 include(CTest)
 include(Catch)
