@@ -4,6 +4,8 @@ add_executable(tests
         17_letter_combinations_of_a_phone_number.cpp
         18_4_sum.cpp
         22_generate_parentheses.cpp
+        41_first_missing_positive.cpp
+        45_jump_game_2.cpp
         114_flatten_binary_tree_to_linked_list.cpp
         162_find_peak_element.cpp
         167_two_sum_2.cpp
@@ -21,8 +23,7 @@ add_executable(tests
         1669_merge_inbetween_linked_lists.cpp
 
         utils.cpp
-        main.cpp
-        41_first_missing_positive.cpp)
+        main.cpp)
 find_package(fmt)
 
 target_link_libraries(tests PRIVATE Catch2::Catch2)
