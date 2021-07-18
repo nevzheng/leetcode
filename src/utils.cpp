@@ -6,6 +6,8 @@
 #include "utils.hpp"
 
 using namespace std;
+
+
 ListNode *makeList(vector<int> a) {
     if (a.empty()) return nullptr;
     auto root = new ListNode(a.front());
@@ -23,4 +25,14 @@ void printList(ListNode *head) {
         head = head->next;
     }
     cout << '\n';
+}
+
+bool compareList(ListNode *a, ListNode *b) {
+    auto aLen(0), bLen(0);
+    while (a and b) {
+        if (a->val != b->val) return false;
+        a = a->next;
+        b = b->next;
+    }
+    return aLen == bLen;
 }

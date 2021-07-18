@@ -4,6 +4,7 @@ add_executable(tests
         0000/000/17_letter_combinations_of_a_phone_number.cpp
         0000/000/18_4_sum.cpp
         0000/000/22_generate_parentheses.cpp
+        0000/000/25_reverse_nodes_in_k_group.cpp
         0000/000/41_first_missing_positive.cpp
         0000/000/45_jump_game_2.cpp
 

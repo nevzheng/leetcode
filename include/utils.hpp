@@ -38,3 +38,4 @@ namespace utils {
 }// namespace utils
 ListNode *makeList(std::vector<int> a);
 void printList(ListNode *head);
+bool compareList(ListNode *a, ListNode *b);
