@@ -17,22 +17,26 @@ int countNodes(ListNode *head) {
     return count;
 }
 
+/**
+ * We will solve this problem in a recursive fashion. You really need to draw this out on a whiteboard
+ * At each stack fram we'll have head, p, q, and r ptrs
+ * Carefully trace the code with paper and a diagram to understand
+ * @param head
+ * @param k
+ * @return
+ */
 ListNode *reverseKGroup(ListNode *head, int k) {
-    ListNode *p = head, *q = nullptr, *r = nullptr;
-    auto size = countNodes(head);
-    auto currLen(0), i(0);
-
-    // Reversing the linked list
-    while (p and i < k) {
+    ListNode *p = head, *q(nullptr), *r(nullptr);
+    auto size = countNodes(head);// O(N) Call Per segment. Can refactor to pass as arg
+    auto i(0);
+    while (p and i < k) {// Reversing the linked list
         r = q;
         q = p;
         p = p->next;
         q->next = r;
-        currLen++;
         i++;
     }
-
-    if (p and size - currLen >= k) {
+    if (p and size - i >= k) {
         head->next = reverseKGroup(p, k);
     } else {
         head->next = p;
