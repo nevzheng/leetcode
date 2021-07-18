@@ -14,6 +14,7 @@ add_executable(tests
         210_course_schedule_ii.cpp
         295_find_median_from_data_stream.cpp
         347_top_k_frequent_elements.cpp
+        416_partition_equal_subset_sum.cpp
         543_diameter_of_binary_tree.cpp
         611_valid_triangle_number.cpp
         787_cheapest_flights_within_k_stops.cpp
