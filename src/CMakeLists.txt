@@ -1,28 +1,35 @@
 add_executable(tests
-        1_two_sum.cpp
-        15_3_sum.cpp
-        17_letter_combinations_of_a_phone_number.cpp
-        18_4_sum.cpp
-        22_generate_parentheses.cpp
-        41_first_missing_positive.cpp
-        45_jump_game_2.cpp
-        114_flatten_binary_tree_to_linked_list.cpp
-        162_find_peak_element.cpp
-        167_two_sum_2.cpp
-        205_isomorphic_strings.cpp
-        207_course_schedule.cpp
-        210_course_schedule_ii.cpp
-        295_find_median_from_data_stream.cpp
-        347_top_k_frequent_elements.cpp
-        416_partition_equal_subset_sum.cpp
-        543_diameter_of_binary_tree.cpp
-        611_valid_triangle_number.cpp
-        787_cheapest_flights_within_k_stops.cpp
-        814_binary_tree_pruning.cpp
-        886_possible_bipartition.cpp
-        927_three_equal_parts.cpp
-        1462_course_schedule_iv.cpp
-        1669_merge_inbetween_linked_lists.cpp
+        0000/000/1_two_sum.cpp
+        0000/000/15_3_sum.cpp
+        0000/000/17_letter_combinations_of_a_phone_number.cpp
+        0000/000/18_4_sum.cpp
+        0000/000/22_generate_parentheses.cpp
+        0000/000/41_first_missing_positive.cpp
+        0000/000/45_jump_game_2.cpp
+
+        0000/100/114_flatten_binary_tree_to_linked_list.cpp
+        0000/100/162_find_peak_element.cpp
+        0000/100/167_two_sum_2.cpp
+
+        0000/200/205_isomorphic_strings.cpp
+        0000/200/207_course_schedule.cpp
+        0000/200/210_course_schedule_ii.cpp
+        0000/200/221_maximal_square.cpp
+        0000/200/295_find_median_from_data_stream.cpp
+
+        0000/300/347_top_k_frequent_elements.cpp
+        0000/400/416_partition_equal_subset_sum.cpp
+
+        0000/500/513_find_bottom_left_tree_value.cpp
+        0000/500/543_diameter_of_binary_tree.cpp
+
+        0000/600/611_valid_triangle_number.cpp
+        0000/700/787_cheapest_flights_within_k_stops.cpp
+        0000/800/814_binary_tree_pruning.cpp
+        0000/800/886_possible_bipartition.cpp
+        0000/900/927_three_equal_parts.cpp
+        1000/1462_course_schedule_iv.cpp
+        1000/1669_merge_inbetween_linked_lists.cpp
 
         utils.cpp
         main.cpp
