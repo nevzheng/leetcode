@@ -9,6 +9,8 @@ add_executable(tests
         0000/000/45_jump_game_2.cpp
 
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
+        0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
+        0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
 
