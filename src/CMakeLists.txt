@@ -25,8 +25,11 @@ add_executable(tests
 
         0000/600/611_valid_triangle_number.cpp
         0000/700/787_cheapest_flights_within_k_stops.cpp
+
         0000/800/814_binary_tree_pruning.cpp
+        0000/800/841_keys_and_rooms.cpp
         0000/800/886_possible_bipartition.cpp
+
         0000/900/927_three_equal_parts.cpp
         1000/1462_course_schedule_iv.cpp
         1000/1669_merge_inbetween_linked_lists.cpp
