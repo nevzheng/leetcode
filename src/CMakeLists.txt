@@ -5,6 +5,8 @@ add_executable(tests
         0000/000/18_4_sum.cpp
         0000/000/22_generate_parentheses.cpp
         0000/000/25_reverse_nodes_in_k_group.cpp
+        0000/000/39_combination_sum.cpp
+        0000/000/40_combination_sum.cpp
         0000/000/41_first_missing_positive.cpp
         0000/000/45_jump_game_2.cpp
 
@@ -17,10 +19,13 @@ add_executable(tests
         0000/200/205_isomorphic_strings.cpp
         0000/200/207_course_schedule.cpp
         0000/200/210_course_schedule_ii.cpp
+        0000/200/216_combination_sum_3.cpp
         0000/200/221_maximal_square.cpp
         0000/200/295_find_median_from_data_stream.cpp
 
         0000/300/347_top_k_frequent_elements.cpp
+        0000/300/377_combination_sum_iv.cpp
+
         0000/400/416_partition_equal_subset_sum.cpp
 
         0000/500/513_find_bottom_left_tree_value.cpp
