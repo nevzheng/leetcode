@@ -9,6 +9,8 @@
 // One thing to note is that we can just use DFS to look for a cycle in the graph.
 // We'll use a DFS+ Coloring approach which will run in O(V+E) time
 
+#include <algorithm>
+#include <tuple>
 #include <utility>
 #include <vector>
 
@@ -37,9 +39,9 @@ bool dfs(const Matrix &adj, vector<Color> &colors, int root) {
     col = Color::Gray;
     auto neighbors = adj[root];
     if (std::any_of(cbegin(neighbors), cend(neighbors),
-                     [&](auto v) {
-                         return !dfs(adj, colors, v);
-                     })) {
+                    [&](auto v) {
+                        return !dfs(adj, colors, v);
+                    })) {
         return false;
     };
     col = Color::Black;

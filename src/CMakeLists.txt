@@ -13,8 +13,11 @@ add_executable(tests
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
         0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
         0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
+        0000/100/126_word_ladder2.cpp
+        0000/100/127_word_ladder.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
+        0000/100/174_dungeon_game.cpp
 
         0000/200/205_isomorphic_strings.cpp
         0000/200/207_course_schedule.cpp
@@ -27,11 +30,15 @@ add_executable(tests
         0000/300/377_combination_sum_iv.cpp
 
         0000/400/416_partition_equal_subset_sum.cpp
+        0000/400/427_concatenated_words.cpp
 
         0000/500/513_find_bottom_left_tree_value.cpp
         0000/500/543_diameter_of_binary_tree.cpp
 
         0000/600/611_valid_triangle_number.cpp
+        0000/600/662_maximum_width_of_binary_tree.cpp
+
+        0000/700/785_is_graph_bipartite.cpp
         0000/700/787_cheapest_flights_within_k_stops.cpp
 
         0000/800/814_binary_tree_pruning.cpp
