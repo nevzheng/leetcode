@@ -12,7 +12,7 @@ ListNode *makeList(vector<int> a) {
     if (a.empty()) return nullptr;
     auto root = new ListNode(a.front());
     auto curr = root;
-    for (auto i = 1; i < a.size(); i++) {
+    for (auto i = 1ul; i < a.size(); i++) {
         curr->next = new ListNode(a[i]);
         curr = curr->next;
     }
