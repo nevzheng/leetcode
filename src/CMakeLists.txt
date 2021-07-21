@@ -1,4 +1,4 @@
-add_executable(tests
+set(SRCS
         0000/000/1_two_sum.cpp
         0000/000/15_3_sum.cpp
         0000/000/17_letter_combinations_of_a_phone_number.cpp
@@ -52,13 +52,19 @@ add_executable(tests
         1000/1669_merge_inbetween_linked_lists.cpp
 
         utils.cpp
-        main.cpp
         )
+
+# Integrate Catch2 Testing Lib
+find_package(Catch2 REQUIRED)
+include(Catch)
+
+# Add Support for #fmt
 find_package(fmt)
 
-target_link_libraries(tests PRIVATE Catch2::Catch2)
-target_link_libraries(tests PRIVATE fmt::fmt)
-
-include(CTest)
-include(Catch)
-catch_discover_tests(tests)
+# Create Executables
+foreach (SRC ${SRCS})
+    get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
+    add_executable(${BIN} ${SRC})
+    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt)
+    catch_discover_tests(${BIN})
+endforeach ()

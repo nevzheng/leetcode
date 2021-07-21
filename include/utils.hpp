@@ -24,18 +24,17 @@ struct ListNode {
     explicit ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-namespace utils {
 
-    template<typename T>
-    void printVector(const T &t) {
-        std::copy(t.cbegin(), t.cend(), std::ostream_iterator<typename T::value_type>(std::cout, ", "));
-    }
+template<typename T>
+void printVector(const T &t) {
+    std::copy(t.cbegin(), t.cend(), std::ostream_iterator<typename T::value_type>(std::cout, ", "));
+}
 
-    template<typename T>
-    void printVectorInVector(const T &t) {
-        std::for_each(t.cbegin(), t.cend(), printVector<typename T::value_type>);
-    }
-}// namespace utils
+template<typename T>
+void printVectorInVector(const T &t) {
+    std::for_each(t.cbegin(), t.cend(), printVector<typename T::value_type>);
+}
+
 ListNode *makeList(std::vector<int> a);
 void printList(ListNode *head);
 bool compareList(ListNode *a, ListNode *b);
