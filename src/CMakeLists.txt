@@ -15,6 +15,7 @@ set(SRCS
         0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
         0000/100/126_word_ladder2.cpp
         0000/100/127_word_ladder.cpp
+        0000/100/138_copy_list_with_random_pointer.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
         0000/100/174_dungeon_game.cpp
