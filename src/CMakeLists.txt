@@ -48,6 +48,7 @@ set(SRCS
         0000/800/841_keys_and_rooms.cpp
         0000/800/886_possible_bipartition.cpp
 
+        0000/900/915_partition_array_into_disjoint_intervals.cpp
         0000/900/927_three_equal_parts.cpp
         0000/900/987_vertical_order_traversal_of_a_binary_tree.cpp
 
