@@ -20,12 +20,14 @@ set(SRCS
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
         0000/100/174_dungeon_game.cpp
+        0000/100/198_house_robber.cpp
 
         0000/200/205_isomorphic_strings.cpp
         0000/200/207_course_schedule.cpp
         0000/200/210_course_schedule_ii.cpp
         0000/200/216_combination_sum_3.cpp
         0000/200/221_maximal_square.cpp
+        0000/200/269_alien_dictionary.cpp
         0000/200/295_find_median_from_data_stream.cpp
 
         0000/300/347_top_k_frequent_elements.cpp
