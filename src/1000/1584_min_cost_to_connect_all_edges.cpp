@@ -8,6 +8,53 @@
 
 using namespace std;
 
+// public:
+//  using Cost = int;
+//  using V = int;
+//  using Edge = pair<Cost, V>;
+//  using MinHeap = priority_queue<Edge, vector<Edge>, std::greater<>>;
+//  using AdjList = vector<vector<Edge>>;
+//  int minCostConnectPoints(const vector<vector<int>>& points) {
+//    auto n_vertices = static_cast<int>(points.size());
+//    auto mst_cost = 0;
+//    AdjList graph(n_vertices);
+//    vector dist(n_vertices, INT_MIN);
+//    vector vis(n_vertices, false);
+//    vector pred(n_vertices, -1);
+//    // Build Our Adjacency List
+//    for (auto u = 0; u < n_vertices - 1; u++) {
+//      for (auto v = 1; v < n_vertices; v++) {
+//        auto [a, b] = tie(points[u], points[v]);
+//        auto cost = abs(a[0] - b[0]) + abs(a[1] - b[1]);
+//        graph[u].push_back({cost, v});
+//        graph[v].push_back({cost, u});
+//      }
+//    }
+//    // Do Prims Algorithm
+//    MinHeap pq;
+//    auto edge_count = 0;
+//    auto src = 0;  // Pick zero index to be source
+//    dist[src] = 0;
+//    vis[src] = true;
+//    for (auto wv : graph[src]) pq.push(wv);  // Push neighbors of src
+//    while (!pq.empty()) {
+//      auto [cost, u] = pq.top();
+//      pq.pop();
+//      if (vis[u]) continue;  // Skip edge which are already included
+//      // Include vertex and add cost to truee
+//      vis[u] = true;
+//      dist[u] = cost;
+//      mst_cost += cost;
+//      edge_count++;
+//      for (auto wv : graph[u]) {
+//        auto [w, v] = wv;
+//        if (!vis[v]) pq.push(wv);
+//      }
+//    }
+//    if (edge_count != n_vertices - 1) return -1;  // Spanning Tree Not Found
+//    return mst_cost;
+//  }
+
 using AdjMatrix = vector<vector<int>>;
 
 int findMinIndex(const int n_vertices, const vector<int>& distance,
