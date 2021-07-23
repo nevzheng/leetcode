@@ -72,10 +72,14 @@ include(Catch)
 # Add Support for #fmt
 find_package(fmt)
 
+# Misc support libraries
+add_library(utils utils.cpp)
+add_library(union_find UnionFind.cpp)
+
 # Create Executables
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
-    add_executable(${BIN} ${SRC} main.cpp utils.cpp UnionFind.cpp ../include/UnionFind.hpp) # Catch main should be its own file to avoid recompilation
-    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt)
+    add_executable(${BIN} ${SRC} main.cpp) # Catch main should be its own file to avoid recompilation
+    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt utils)
     catch_discover_tests(${BIN})
 endforeach ()
