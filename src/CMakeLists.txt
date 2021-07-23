@@ -61,6 +61,8 @@ set(SRCS
         1000/1462_course_schedule_iv.cpp
         1000/1584_min_cost_to_connect_all_edges.cpp
         1000/1669_merge_inbetween_linked_lists.cpp
+
+        misc/min_cost_to_repair_edges.cpp
         )
 
 # Integrate Catch2 Testing Lib
