@@ -5,9 +5,6 @@
 
 #include <numeric>
 #include <vector>
-namespace union_find {
-
-using namespace std;
 
 class UnionFind {
  private:
@@ -18,8 +15,8 @@ class UnionFind {
    * id_[p] = p => Root Component which uniquely identifies component
    * id_[p] = q => p belongs to same component as q.
    */
-  vector<int> id_;
-  vector<int> size_;
+  std::vector<int> id_;
+  std::vector<int> size_;
 
  public:
   /**
@@ -58,4 +55,3 @@ class UnionFind {
    */
   void unite(int p, int q);
 };
-}  // namespace union_find

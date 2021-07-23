@@ -8,7 +8,7 @@
 
 #include "UnionFind.hpp"
 
-void union_find::UnionFind::unite(int p, int q) {
+void UnionFind::unite(int p, int q) {
   auto p_root = find(p);
   auto q_root = find(q);
   if (p_root == q_root) return;
@@ -21,13 +21,11 @@ void union_find::UnionFind::unite(int p, int q) {
   }
 }
 
-bool union_find::UnionFind::connected(int p, int q) {
-  return find(p) == find(q);
-}
+bool UnionFind::connected(int p, int q) { return find(p) == find(q); }
 
-int union_find::UnionFind::size(int p) { return size_[find(p)]; }
+int UnionFind::size(int p) { return size_[find(p)]; }
 
-int union_find::UnionFind::find(int p) {
+int UnionFind::find(int p) {
   auto root = p;
   while (root != id_[root]) root = id_[root];
   while (p != root) {  // Do Path Compression
@@ -38,7 +36,7 @@ int union_find::UnionFind::find(int p) {
   return root;
 }
 
-union_find::UnionFind::UnionFind(int n)
-    : id_(vector<int>(n)), size_(vector(n, 1)) {
+UnionFind::UnionFind(int n)
+    : id_(std::vector<int>(n)), size_(std::vector(n, 1)) {
   iota(begin(id_), end(id_), 0);
 }
