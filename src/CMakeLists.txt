@@ -56,6 +56,7 @@ set(SRCS
         0000/900/927_three_equal_parts.cpp
         0000/900/987_vertical_order_traversal_of_a_binary_tree.cpp
 
+        1000/1041_robot_bounded_in_circle.cpp
         1000/1462_course_schedule_iv.cpp
         1000/1669_merge_inbetween_linked_lists.cpp
         )
