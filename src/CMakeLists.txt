@@ -75,7 +75,7 @@ find_package(fmt)
 # Create Executables
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
-    add_executable(${BIN} ${SRC} main.cpp utils.cpp) # Catch main should be its own file to avoid recompilation
+    add_executable(${BIN} ${SRC} main.cpp utils.cpp UnionFind.cpp ../include/UnionFind.hpp) # Catch main should be its own file to avoid recompilation
     target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt)
     catch_discover_tests(${BIN})
 endforeach ()
