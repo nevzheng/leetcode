@@ -41,6 +41,7 @@ set(SRCS
         0000/500/513_find_bottom_left_tree_value.cpp
         0000/500/543_diameter_of_binary_tree.cpp
 
+        0000/600/600_non_negative_integers_without_consecutive_ones.cpp
         0000/600/611_valid_triangle_number.cpp
         0000/600/662_maximum_width_of_binary_tree.cpp
 
