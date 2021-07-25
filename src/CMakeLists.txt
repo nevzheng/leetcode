@@ -17,6 +17,7 @@ set(SRCS
         0000/100/127_word_ladder.cpp
         0000/100/133_clone_graph.cpp
         0000/100/138_copy_list_with_random_pointer.cpp
+        0000/100/139_word_break.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
         0000/100/174_dungeon_game.cpp
@@ -74,14 +75,10 @@ include(Catch)
 # Add Support for #fmt
 find_package(fmt)
 
-# Misc support libraries
-add_library(utils utils.cpp)
-add_library(union_find UnionFind.cpp)
-
 # Create Executables
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
     add_executable(${BIN} ${SRC} main.cpp) # Catch main should be its own file to avoid recompilation
-    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt utils)
+    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt)
     catch_discover_tests(${BIN})
 endforeach ()
