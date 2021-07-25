@@ -2,37 +2,38 @@
 // Nevin Zheng
 // 7/25/21
 
-#include <bits/stdc++.h>
 #include <catch2/catch.hpp>
 #include <fmt/format.h>
 
 using namespace std;
-using Cache = map<pair<uint32_t, uint32_t>, int>;
 
-int countIntegers(Cache& cache, uint32_t max, uint32_t n_bits, uint32_t sum,
-                  uint32_t digit) {
-  if (cache.count({n_bits, digit}) != 0U) return cache.at({n_bits, digit});
-  // Reached Depth limit
-  if (n_bits == 0 and sum > max) return 0;   // Invalid String
-  if (n_bits == 0 and sum <= max) return 1;  // Valid String
-  sum <<= 1;                                 // Make Room for the new digit
-  if (digit == 0) {  // Place 0, Next Digit can be 0 or 1;
-    auto x = countIntegers(cache, max, n_bits - 1, sum, 0) +
-             countIntegers(cache, max, n_bits - 1, sum, 1);
-    return cache[{n_bits, digit}] = x;
+// This Solution is right, but TLE
+// int find(int max, int sum, int pos, bool prev) {
+//  if (sum > max) return 0;       // Exceeded max
+//  if (1 << pos > max) return 1;  // sum <= num, and reached bit limit
+//  if (prev) return find(max, sum, pos + 1, false);
+//  return find(max, sum, pos + 1, false) +
+//         find(max, sum + (1 << pos), pos + 1, true);
+//}
+//
+// int findIntegers(int n) { return find(n, 0, 0, false); }
+
+int countIntegers(int sum, int max) {
+  if (sum > max) return 0;
+  if (sum & 1) {  // Current Int ends in 1
+    // get count of appending 0, then add 1 to it, simulating appending 1
+    return 1 + countIntegers((sum << 1) | 0, max);
   }
-  if (digit == 1) {  // If we place a 1, next digit must be 0;
-    auto x = countIntegers(cache, max, n_bits - 1, sum + 1, 0);
-    return cache[{n_bits, digit}] = x;
-  }
-  return 0;  // Unreachable
+  // Ends with 0
+  // Get count of appending a 0, add 1 to it
+  // Get count of appending 1
+  return 1 + countIntegers((sum << 1) | 0, max) +
+         countIntegers((sum << 1) | 1, max);
 }
 
 int findIntegers(int n) {
-  int n_bits = ceil(log2(n));  // Number of bits to place
-  Cache cache;
-  return countIntegers(cache, n, n_bits, 0, 0) +
-         countIntegers(cache, n, n_bits, 0, 1);
+  // Add Extra digit 0/1
+  return 1 + countIntegers(1, n);
 }
 
 TEST_CASE("600ex1", "[600]") {
