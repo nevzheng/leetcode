@@ -59,6 +59,7 @@ set(SRCS
         0000/900/927_three_equal_parts.cpp
         0000/900/987_vertical_order_traversal_of_a_binary_tree.cpp
 
+        1000/1008_construct_binary_search_tree_from_preorder_traversal.cpp
         1000/1041_robot_bounded_in_circle.cpp
         1000/1192_critical_connections_in_a_network.cpp
         1000/1335_minimum_difficulty_of_job_schedule.cpp
