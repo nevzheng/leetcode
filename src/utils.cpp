@@ -1,9 +1,8 @@
 //
 // Created by Nevin Zheng on 7/15/21.
 //
+#include "../include/utils.hpp"
 #include <vector>
-
-#include "utils.hpp"
 
 using namespace std;
 

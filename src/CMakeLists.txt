@@ -78,10 +78,18 @@ include(Catch)
 # Add Support for #fmt
 find_package(fmt)
 
+# Add Utils
+add_library(utils utils.cpp Tree.cpp)
+target_link_libraries(utils fmt::fmt)
+# Add Union Find
+add_library(union_find UnionFind.cpp)
+# Add Tarjan Solver
+add_library(tarjan_solver TarjanSolver.cpp)
+
 # Create Executables
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
     add_executable(${BIN} ${SRC} main.cpp) # Catch main should be its own file to avoid recompilation
-    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt)
+    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt utils)
     catch_discover_tests(${BIN})
 endforeach ()

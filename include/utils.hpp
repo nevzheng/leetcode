@@ -6,17 +6,6 @@
 #include <iostream>
 #include <iterator>
 
-// Definition for a binary tree node.
-struct TreeNode {
-  int val{0};
-  TreeNode* left{nullptr};
-  TreeNode* right{nullptr};
-  TreeNode() = default;
-  explicit TreeNode(int x);
-  TreeNode(int x, TreeNode* left, TreeNode* right)
-      : val(x), left(left), right(right) {}
-};
-
 // Definition for a Singly Linked list
 struct ListNode {
   int val{0};

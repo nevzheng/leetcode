@@ -6,7 +6,7 @@
 // Created by Nevin Zheng on 7/23/21.
 //
 
-#include "UnionFind.hpp"
+#include "../include/UnionFind.hpp"
 
 void UnionFind::unite(int p, int q) {
   auto p_root = find(p);
