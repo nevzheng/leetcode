@@ -57,6 +57,7 @@ set(SRCS
 
         0000/900/915_partition_array_into_disjoint_intervals.cpp
         0000/900/927_three_equal_parts.cpp
+        0000/900/968_binary_tree_cameras.cpp
         0000/900/987_vertical_order_traversal_of_a_binary_tree.cpp
 
         1000/1008_construct_binary_search_tree_from_preorder_traversal.cpp
