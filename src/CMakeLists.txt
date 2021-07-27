@@ -10,6 +10,7 @@ set(SRCS
         0000/000/41_first_missing_positive.cpp
         0000/000/45_jump_game_2.cpp
 
+        0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
         0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
         0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
@@ -30,6 +31,7 @@ set(SRCS
         0000/200/213_house_robber_2.cpp
         0000/200/216_combination_sum_3.cpp
         0000/200/221_maximal_square.cpp
+        0000/200/268_missing_number.cpp
         0000/200/269_alien_dictionary.cpp
         0000/200/295_find_median_from_data_stream.cpp
 
@@ -41,6 +43,7 @@ set(SRCS
         0000/400/427_concatenated_words.cpp
 
         0000/500/513_find_bottom_left_tree_value.cpp
+        0000/500/516_longest_palindromic_subsequence.cpp
         0000/500/543_diameter_of_binary_tree.cpp
 
         0000/600/600_non_negative_integers_without_consecutive_ones.cpp
@@ -62,6 +65,7 @@ set(SRCS
 
         1000/1008_construct_binary_search_tree_from_preorder_traversal.cpp
         1000/1041_robot_bounded_in_circle.cpp
+        1000/1143_longest_common_subsequence.cpp
         1000/1192_critical_connections_in_a_network.cpp
         1000/1335_minimum_difficulty_of_job_schedule.cpp
         1000/1462_course_schedule_iv.cpp

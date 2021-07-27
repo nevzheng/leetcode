@@ -10,7 +10,7 @@ using namespace std;
 
 using AdjList = map<string, set<string>>;
 using Dict = set<string>;
-using WordList = vector<string>;
+using WordVec = vector<string>;
 using ParentMap = map<string, set<string>>;
 using PathVec = vector<vector<string>>;
 
@@ -27,7 +27,7 @@ void neighborSearch(const Dict& dict, AdjList& G, const string& word) {
   }
 }
 
-AdjList makeAdjList(const WordList& wordList, const Dict& dict) {
+AdjList makeAdjList(const WordVec& wordList, const Dict& dict) {
   AdjList g;
   // Iterate over each word and add edges to other words
   for (const auto& word : wordList) neighborSearch(dict, g, word);
@@ -52,7 +52,7 @@ void tracePaths(const ParentMap& parents, vector<string> path,
 }
 
 PathVec findLadders(const string& beginWord, const string& endWord,
-                    const WordList& wordList) {
+                    const WordVec& wordList) {
   if (auto it = find(begin(wordList), end(wordList), endWord);
       it == end(wordList))
     return {};
