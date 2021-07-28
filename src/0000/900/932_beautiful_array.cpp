@@ -54,26 +54,63 @@ using namespace std;
  * like returning references to elements in the cache to avoid copying.
  * and preallocating memory when forming the new entry
  */
-class Solution {
-  map<int, vector<int>> cache_;
+// class Solution {
+//   map<int, vector<int>> cache_;
+//
+//   vector<int>& construct(int n) {
+//     if (cache_.count(n)) return cache_.at(n);
+//     if (n == 0) return cache_[0] = {};
+//     if (n == 1) return cache_[1] = {1};
+//     auto& odds = construct((n / 2) + (n % 2));
+//     auto& evens = construct((n / 2));
+//     auto& ans = cache_[n];
+//     ans.reserve(n);  // preallocate
+//     transform(begin(odds), end(odds), back_inserter(ans),
+//               [](auto x) { return 2 * x - 1; });
+//     transform(begin(evens), end(evens), back_inserter(ans),
+//               [](auto x) { return 2 * x; });
+//     return ans;
+//   }
+//
+//  public:
+//   vector<int> beautifulArray(int n) { return construct(n); }
+// };
 
-  vector<int>& construct(int n) {
-    if (cache_.count(n)) return cache_.at(n);
-    if (n == 0) return cache_[0] = {};
-    if (n == 1) return cache_[1] = {1};
-    auto& odds = construct((n / 2) + (n % 2));
-    auto& evens = construct((n / 2));
-    auto& ans = cache_[n];
-    ans.reserve(n);  // preallocate
-    transform(begin(odds), end(odds), back_inserter(ans),
-              [](auto x) { return 2 * x - 1; });
-    transform(begin(evens), end(evens), back_inserter(ans),
-              [](auto x) { return 2 * x; });
+/**
+ * Everything said about the previous sequence still applies.
+ * However, we can derive an nlgn solution with constant space
+ * by examining the bit patterns of the integers 1 to n
+ * We note that we need all the evens on one side and the odds on the other.
+ * Add numbers have a 1 as their LSB. If we sort by the reverse, we'll get
+ * all the evens and odds on one side of the partition
+ * For 1 to 5 we have [001, 010, 011, 100, 101] 1,2,3,4,5
+ * [001, 101, 011, 010, 100 ] = 1, 5, 3, 2, 4
+ * Essentially, we can sort the reversed bit strings lexicographically
+ * to derive the beautiful array.
+ * We want reverse because we want the LSB first
+ * If we make 0 compare greater than 1 we can maintain the odds first
+ * then the evens. evens before odds is also valid
+ * // This Solution is correct, but i didn't update the test cases
+ */
+class Solution {
+ public:
+  vector<int> beautifulArray(int n) {
+    vector<int> ans(n);
+    iota(begin(ans), end(ans), 1);
+    sort(begin(ans), end(ans), [](const int a, const int b) {
+      constexpr int kIntBits = 32;
+      int k_mask = 0x1;  // Mask for the first digit
+      for (auto i = 0; i < kIntBits; i++) {
+        // Skip if bits are same
+        auto a_bit = a & k_mask;
+        auto b_bit = b & k_mask;
+        if (a_bit != b_bit) return a_bit > b_bit;
+        k_mask <<= 1;  // Move to the next bit
+      }
+      return true;
+    });
     return ans;
   }
-
- public:
-  vector<int> beautifulArray(int n) { return construct(n); }
 };
 
 TEST_CASE("932ex0", "[932]") {
