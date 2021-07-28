@@ -9,6 +9,7 @@ set(SRCS
         0000/000/40_combination_sum.cpp
         0000/000/41_first_missing_positive.cpp
         0000/000/45_jump_game_2.cpp
+        0000/000/53_max_subarray.cpp
 
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
