@@ -1,6 +1,7 @@
 set(SRCS
         0000/000/1_two_sum.cpp
         0000/000/15_3_sum.cpp
+        0000/000/16_3sum_closest.cpp
         0000/000/17_letter_combinations_of_a_phone_number.cpp
         0000/000/18_4_sum.cpp
         0000/000/22_generate_parentheses.cpp
@@ -11,6 +12,7 @@ set(SRCS
         0000/000/45_jump_game_2.cpp
         0000/000/53_max_subarray.cpp
 
+        0000/100/105_construct_binary_tree_from_preorder_and_inorder_traversal.cpp
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
         0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
@@ -39,17 +41,21 @@ set(SRCS
         0000/300/337_house_robber_3.cpp
         0000/300/347_top_k_frequent_elements.cpp
         0000/300/377_combination_sum_iv.cpp
+        0000/300/394_decode_string.cpp
 
         0000/400/416_partition_equal_subset_sum.cpp
         0000/400/427_concatenated_words.cpp
 
         0000/500/513_find_bottom_left_tree_value.cpp
         0000/500/516_longest_palindromic_subsequence.cpp
+        0000/500/542_01_matrix.cpp
         0000/500/543_diameter_of_binary_tree.cpp
 
         0000/600/600_non_negative_integers_without_consecutive_ones.cpp
         0000/600/611_valid_triangle_number.cpp
         0000/600/662_maximum_width_of_binary_tree.cpp
+        0000/600/684_redundant_connection.cpp
+        0000/600/685_redundant_connection_2.cpp
 
         0000/700/785_is_graph_bipartite.cpp
         0000/700/787_cheapest_flights_within_k_stops.cpp
