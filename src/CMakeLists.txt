@@ -33,6 +33,7 @@ set(SRCS
         0000/200/205_isomorphic_strings.cpp
         0000/200/207_course_schedule.cpp
         0000/200/210_course_schedule_ii.cpp
+        0000/200/212_word_search_ii.cpp
         0000/200/213_house_robber_2.cpp
         0000/200/216_combination_sum_3.cpp
         0000/200/221_maximal_square.cpp
