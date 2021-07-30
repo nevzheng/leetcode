@@ -17,6 +17,7 @@ set(SRCS
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
         0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
         0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
+        0000/100/124_binary_tree_max_path_value.cpp
         0000/100/126_word_ladder2.cpp
         0000/100/127_word_ladder.cpp
         0000/100/133_clone_graph.cpp
@@ -54,6 +55,7 @@ set(SRCS
         0000/600/600_non_negative_integers_without_consecutive_ones.cpp
         0000/600/611_valid_triangle_number.cpp
         0000/600/662_maximum_width_of_binary_tree.cpp
+        0000/600/677_map_sum_pairs.cpp
         0000/600/684_redundant_connection.cpp
         0000/600/685_redundant_connection_2.cpp
 
