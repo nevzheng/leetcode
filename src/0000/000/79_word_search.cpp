@@ -8,6 +8,48 @@
 
 using namespace std;
 
+// Alternate cleaner version. A little less efficient since it makes
+// a invalid calls
+// using Board = vector<vector<char>>;
+// using VisSet = vector<vector<bool>>;
+// class Solution {
+// public:
+//  bool dfs(const Board& board, const int rows, const int cols, VisSet&
+//  visited,
+//           string_view suffix, int i, int j) {
+//    if (i < 0 or i >= rows or           // Invalid Row
+//        j < 0 or j >= cols or           // invalid Col
+//        visited[i][j] or                // Already visited
+//        suffix.front() != board[i][j])  // invalid char
+//      return false;
+//
+//    if (suffix.size() == 1) return true;  // Last Char and matched, return
+//    true
+//
+//    // Continue Exploring
+//    suffix.remove_prefix(1);
+//    visited[i][j] = true;  // Mark Current Cell as Visited
+//    auto result = dfs(board, rows, cols, visited, suffix, i + 1, j) or
+//                  dfs(board, rows, cols, visited, suffix, i - 1, j) or
+//                  dfs(board, rows, cols, visited, suffix, i, j + 1) or
+//                  dfs(board, rows, cols, visited, suffix, i, j - 1);
+//    visited[i][j] = false;  // Pop Cell from visited to allow other paths to
+//    use return result;
+//  }
+//
+//  bool exist(const Board& board, const string& word) {
+//    int rows = static_cast<int>(board.size());
+//    int cols = static_cast<int>(board.front().size());
+//    VisSet visited(rows, vector(cols, false));
+//    for (auto i = 0; i < rows; i++) {
+//      for (auto j = 0; j < cols; j++) {
+//        if (dfs(board, rows, cols, visited, word, i, j)) return true;
+//      }
+//    }
+//    return false;
+//  }
+//};
+
 using Board = vector<vector<char>>;
 using VisSet = vector<vector<bool>>;
 class Solution {
