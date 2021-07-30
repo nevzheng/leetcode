@@ -11,6 +11,7 @@ set(SRCS
         0000/000/41_first_missing_positive.cpp
         0000/000/45_jump_game_2.cpp
         0000/000/53_max_subarray.cpp
+        0000/000/79_word_search.cpp
 
         0000/100/105_construct_binary_tree_from_preorder_and_inorder_traversal.cpp
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
