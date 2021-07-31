@@ -1,5 +1,6 @@
 set(SRCS
         0000/000/1_two_sum.cpp
+        0000/000/4_median_of_two_sorted_arrays.cpp
         0000/000/15_3_sum.cpp
         0000/000/16_3sum_closest.cpp
         0000/000/17_letter_combinations_of_a_phone_number.cpp
@@ -9,6 +10,7 @@ set(SRCS
         0000/000/39_combination_sum.cpp
         0000/000/40_combination_sum.cpp
         0000/000/41_first_missing_positive.cpp
+        0000/000/42_trapping_rain_water.cpp
         0000/000/45_jump_game_2.cpp
         0000/000/53_max_subarray.cpp
         0000/000/79_word_search.cpp
