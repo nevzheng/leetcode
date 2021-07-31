@@ -8,35 +8,56 @@
 
 using namespace std;
 
+// class Solution {
+//  public:
+//   static int trap(const vector<int>& H) {
+//     auto len = static_cast<int>(H.size());
+//     stack<int> max_stk;
+//     vector<int> l_min(len);
+//     vector<int> r_min(len);
+//     vector<int> water(len);
+//
+//     // Forward Pass for determining the max value to the left
+//     for (auto i = 0; i < len; i++) {
+//       while (!max_stk.empty() and max_stk.top() <= H[i]) max_stk.pop();
+//       l_min[i] = max_stk.empty() ? 0 : max_stk.top();
+//       if (max_stk.empty() || H[i] >= max_stk.top()) max_stk.push(H[i]);
+//     }
+//     max_stk = {};  // Clear the stack for next pass
+//     // Reverse Pass for determining the min value to the right
+//     for (auto i = len - 1; i >= 0; i--) {
+//       while (!max_stk.empty() and max_stk.top() <= H[i]) max_stk.pop();
+//       r_min[i] = max_stk.empty() ? 0 : max_stk.top();
+//       if (max_stk.empty() || H[i] >= max_stk.top()) max_stk.push(H[i]);
+//     }
+//     auto idx = -1;
+//     return std::transform_reduce(begin(l_min), end(l_min), begin(r_min), 0,
+//                                  plus<>(), [&](const auto L, const auto R) {
+//                                    ++idx;
+//                                    if (!L or !R) return 0;
+//                                    return min(L, R) - H[idx];
+//                                  });
+//   }
+// };
+
 class Solution {
  public:
   static int trap(const vector<int>& H) {
-    auto len = static_cast<int>(H.size());
-    stack<int> max_stk;
-    vector<int> l_min(len);
-    vector<int> r_min(len);
-    vector<int> water(len);
-
-    // Forward Pass for determining the max value to the left
-    for (auto i = 0; i < len; i++) {
-      while (!max_stk.empty() and max_stk.top() <= H[i]) max_stk.pop();
-      l_min[i] = max_stk.empty() ? 0 : max_stk.top();
-      if (max_stk.empty() || H[i] >= max_stk.top()) max_stk.push(H[i]);
+    auto l = 0UL;
+    auto r = H.size() - 1;
+    auto l_max = 0;
+    auto r_max = 0;
+    auto water = 0;
+    while (l < r) {
+      if (H[l] < H[r]) {
+        H[l] >= l_max ? (l_max = H[l]) : (water += l_max - H[l]);
+        ++l;
+      } else {
+        H[r] >= r_max ? (r_max = H[r]) : (water += r_max - H[r]);
+        --r;
+      }
     }
-    max_stk = {};  // Clear the stack for next pass
-    // Reverse Pass for determining the min value to the right
-    for (auto i = len - 1; i >= 0; i--) {
-      while (!max_stk.empty() and max_stk.top() <= H[i]) max_stk.pop();
-      r_min[i] = max_stk.empty() ? 0 : max_stk.top();
-      if (max_stk.empty() || H[i] >= max_stk.top()) max_stk.push(H[i]);
-    }
-    auto idx = -1;
-    return std::transform_reduce(begin(l_min), end(l_min), begin(r_min), 0,
-                                 plus<>(), [&](const auto L, const auto R) {
-                                   ++idx;
-                                   if (!L or !R) return 0;
-                                   return min(L, R) - H[idx];
-                                 });
+    return water;
   }
 };
 
