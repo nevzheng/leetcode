@@ -43,6 +43,7 @@ using namespace std;
 class Solution {
  public:
   static int trap(const vector<int>& H) {
+    if (H.empty()) return 0;
     auto l = 0UL;
     auto r = H.size() - 1;
     auto l_max = 0;
