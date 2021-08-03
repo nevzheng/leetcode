@@ -15,6 +15,7 @@ set(SRCS
         0000/000/41_first_missing_positive.cpp
         0000/000/42_trapping_rain_water.cpp
         0000/000/45_jump_game_2.cpp
+        0000/000/50_power.cpp
         0000/000/53_max_subarray.cpp
         0000/000/79_word_search.cpp
         0000/000/90_subsets_2.cpp
