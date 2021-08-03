@@ -14,11 +14,11 @@ class Solution {
   const map<char, char> rotated_{
       {'0', '0'}, {'1', '1'}, {'6', '9'}, {'8', '8'}, {'9', '6'}};
   const vector<int> valid_{0, 1, 6, 8, 9};
-  int count_;
+  int count_ = 0;
 
   bool isConfusing(int N) {
     auto num = to_string(N);  // Convert to a string
-    // all of the digits of the number have to be 0,1,6,8,9
+    // all the digits of the number have to be 0,1,6,8,9
     if (!all_of(cbegin(num), cend(num),
                 [&](auto c) { return rotated_.count(c); })) {
       return false;
