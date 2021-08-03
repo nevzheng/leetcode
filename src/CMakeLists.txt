@@ -1,5 +1,6 @@
 set(SRCS
         0000/000/1_two_sum.cpp
+        0000/000/2_add_two_numbers.cpp
         0000/000/4_median_of_two_sorted_arrays.cpp
         0000/000/15_3_sum.cpp
         0000/000/16_3sum_closest.cpp
@@ -66,10 +67,12 @@ set(SRCS
         0000/600/684_redundant_connection.cpp
         0000/600/685_redundant_connection_2.cpp
 
+        0000/700/703_kth_largest_element_in_a_stream.cpp
         0000/700/785_is_graph_bipartite.cpp
         0000/700/787_cheapest_flights_within_k_stops.cpp
 
         0000/800/814_binary_tree_pruning.cpp
+        0000/800/827_making_a_large_island.cpp
         0000/800/838_push_dominoes.cpp
         0000/800/841_keys_and_rooms.cpp
         0000/800/886_possible_bipartition.cpp
@@ -79,6 +82,7 @@ set(SRCS
         0000/900/932_beautiful_array.cpp
         0000/900/968_binary_tree_cameras.cpp
         0000/900/987_vertical_order_traversal_of_a_binary_tree.cpp
+        0000/900/988_smallest_string_starting_from_leaf.cpp
 
         1000/1008_construct_binary_search_tree_from_preorder_traversal.cpp
         1000/1041_robot_bounded_in_circle.cpp
