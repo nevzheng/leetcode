@@ -2,6 +2,7 @@
 // Created by Nevin Zheng on 7/13/21.
 //
 #pragma once
+#include <Tree.hpp>
 #include <algorithm>
 #include <iostream>
 #include <iterator>
@@ -14,7 +15,7 @@ struct ListNode {
   explicit ListNode(int x) : val(x) {}
   ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
-
+namespace utils {
 template <typename T>
 void printVector(const T& t) {
   std::copy(t.cbegin(), t.cend(),
@@ -67,3 +68,4 @@ constexpr auto min(T1&& t1, T2&& t2, Tail&&... tail) {
     return min(min(t1, t2), tail...);
   }
 }
+}  // namespace utils

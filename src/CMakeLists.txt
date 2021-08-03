@@ -2,12 +2,14 @@ set(SRCS
         0000/000/1_two_sum.cpp
         0000/000/2_add_two_numbers.cpp
         0000/000/4_median_of_two_sorted_arrays.cpp
+        0000/000/14_longest_common_prefix.cpp
         0000/000/15_3_sum.cpp
         0000/000/16_3sum_closest.cpp
         0000/000/17_letter_combinations_of_a_phone_number.cpp
         0000/000/18_4_sum.cpp
         0000/000/22_generate_parentheses.cpp
         0000/000/25_reverse_nodes_in_k_group.cpp
+        0000/000/33_search_in_rotated_sorted_array.cpp
         0000/000/39_combination_sum.cpp
         0000/000/40_combination_sum.cpp
         0000/000/41_first_missing_positive.cpp
@@ -55,6 +57,7 @@ set(SRCS
         0000/400/416_partition_equal_subset_sum.cpp
         0000/400/427_concatenated_words.cpp
 
+        0000/500/508_most_frequent_subtree_sum.cpp
         0000/500/513_find_bottom_left_tree_value.cpp
         0000/500/516_longest_palindromic_subsequence.cpp
         0000/500/542_01_matrix.cpp
@@ -92,6 +95,7 @@ set(SRCS
         1000/1192_critical_connections_in_a_network.cpp
         1000/1306_jump_game_iii.cpp
         1000/1335_minimum_difficulty_of_job_schedule.cpp
+        1000/1405_longest_happy_string.cpp
         1000/1462_course_schedule_iv.cpp
         1000/1584_min_cost_to_connect_all_edges.cpp
         1000/1669_merge_inbetween_linked_lists.cpp

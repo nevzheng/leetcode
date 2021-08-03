@@ -36,7 +36,6 @@ int UnionFind::find(int p) {
   return root;
 }
 
-UnionFind::UnionFind(int n)
-    : id_(std::vector<int>(n)), size_(std::vector(n, 1)) {
-  iota(begin(id_), end(id_), 0);
+UnionFind::UnionFind(int n) : id_(n), size_(n, 1) {
+  std::iota(id_.begin(), id_.end(), 0);
 }

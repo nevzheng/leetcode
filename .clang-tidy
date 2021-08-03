@@ -2,7 +2,7 @@
 # https://github.com/googleapis/google-cloud-cpp/blob/main/.clang-tidy
 # Configure clang-tidy for this project.
 
-# Here is an explanation for why some of the checks are disabled:
+# Here is an explanation for why some checks are disabled:
 #
 #  -google-readability-namespace-comments: the *_CLIENT_NS is a macro, and
 #      clang-tidy fails to match it against the initial value.
