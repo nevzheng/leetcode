@@ -14,6 +14,7 @@ set(SRCS
         0000/000/45_jump_game_2.cpp
         0000/000/53_max_subarray.cpp
         0000/000/79_word_search.cpp
+        0000/000/90_subsets_2.cpp
 
         0000/100/105_construct_binary_tree_from_preorder_and_inorder_traversal.cpp
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
@@ -27,10 +28,12 @@ set(SRCS
         0000/100/138_copy_list_with_random_pointer.cpp
         0000/100/139_word_break.cpp
         0000/100/140_word_break_2.cpp
+        0000/100/146_lru_cache.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
         0000/100/174_dungeon_game.cpp
         0000/100/198_house_robber.cpp
+        0000/100/199_binary_tree_right_side_view.cpp
 
         0000/200/205_isomorphic_strings.cpp
         0000/200/207_course_schedule.cpp
