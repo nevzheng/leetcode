@@ -91,6 +91,7 @@ set(SRCS
         1000/1008_construct_binary_search_tree_from_preorder_traversal.cpp
         1000/1041_robot_bounded_in_circle.cpp
         1000/1056_confusing_number.cpp
+        1000/1057_campus_bikes.cpp
         1000/1088_confusing_number_2.cpp
         1000/1143_longest_common_subsequence.cpp
         1000/1192_critical_connections_in_a_network.cpp
