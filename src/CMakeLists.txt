@@ -22,6 +22,7 @@ set(SRCS
 
         0000/100/105_construct_binary_tree_from_preorder_and_inorder_traversal.cpp
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
+        0000/100/110_balanced_binary_tree.cpp
         0000/100/114_flatten_binary_tree_to_linked_list.cpp
         0000/100/116_populating_next_right_pointers_in_each_node_1.cpp
         0000/100/117_populating_next_right_pointers_in_each_node_2.cpp
