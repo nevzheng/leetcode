@@ -17,8 +17,10 @@ set(SRCS
         0000/000/45_jump_game_2.cpp
         0000/000/50_power.cpp
         0000/000/53_max_subarray.cpp
+        0000/000/72_edit_distance.cpp
         0000/000/79_word_search.cpp
         0000/000/90_subsets_2.cpp
+        0000/000/94_binary_tree_inorder_traversal.cpp
 
         0000/100/105_construct_binary_tree_from_preorder_and_inorder_traversal.cpp
         0000/100/108_convert_sorted_array_to_binary_search_tree.cpp
@@ -33,6 +35,8 @@ set(SRCS
         0000/100/138_copy_list_with_random_pointer.cpp
         0000/100/139_word_break.cpp
         0000/100/140_word_break_2.cpp
+        0000/100/144_preorder_traversal.cpp
+        0000/100/145_binary_tree_postorder_traversal.cpp
         0000/100/146_lru_cache.cpp
         0000/100/162_find_peak_element.cpp
         0000/100/167_two_sum_2.cpp
@@ -109,16 +113,15 @@ set(SRCS
         misc/five_star_sellers.cpp
         )
 
-# Integrate Catch2 Testing Lib
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+## Integrate Catch2 Testing Lib
 find_package(Catch2 REQUIRED)
 include(Catch)
 
-# Add Support for #fmt
-find_package(fmt)
-
 # Add Utils
 add_library(utils utils.cpp Tree.cpp)
-target_link_libraries(utils fmt::fmt)
+target_link_libraries(utils CONAN_PKG::fmt)
 # Add Union Find
 add_library(union_find UnionFind.cpp)
 # Add Tarjan Solver
@@ -128,6 +131,6 @@ add_library(tarjan_solver TarjanSolver.cpp)
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
     add_executable(${BIN} ${SRC} main.cpp) # Catch main should be its own file to avoid recompilation
-    target_link_libraries(${BIN} PRIVATE Catch2::Catch2 fmt::fmt utils)
+    target_link_libraries(${BIN} PRIVATE CONAN_PKG::catch2 CONAN_PKG::fmt utils)
     catch_discover_tests(${BIN})
 endforeach ()
