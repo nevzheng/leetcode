@@ -19,6 +19,8 @@
 #      avoiding C arrays often makes the code less readable, and std::array is
 #      not a drop-in replacement because it doesn't deduce the size.
 #
+#  -misc-no-recursion: Recursion is acceptable for leetcode questions.
+#
 #  -performance-move-const-arg: This warning requires the developer to
 #      know/care more about the implementation details of types/functions than
 #      should be necessary. For example, `A a; F(std::move(a));` will trigger a
@@ -57,6 +59,7 @@ Checks: >
   -google-readability-namespace-comments,
   -google-runtime-references,
   -misc-non-private-member-variables-in-classes,
+  -misc-no-recursion,
   -modernize-return-braced-init-list,
   -modernize-use-trailing-return-type,
   -modernize-avoid-c-arrays,

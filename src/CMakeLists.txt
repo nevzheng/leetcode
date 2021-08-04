@@ -95,6 +95,7 @@ set(SRCS
         1000/1143_longest_common_subsequence.cpp
         1000/1192_critical_connections_in_a_network.cpp
         1000/1306_jump_game_iii.cpp
+        1000/1315_sum_of_even_grandparents.cpp
         1000/1335_minimum_difficulty_of_job_schedule.cpp
         1000/1405_longest_happy_string.cpp
         1000/1462_course_schedule_iv.cpp
