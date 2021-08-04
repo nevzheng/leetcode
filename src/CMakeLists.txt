@@ -102,6 +102,7 @@ set(SRCS
         1000/1669_merge_inbetween_linked_lists.cpp
 
         misc/min_cost_to_repair_edges.cpp
+        misc/five_star_sellers.cpp
         )
 
 # Integrate Catch2 Testing Lib
