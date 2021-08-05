@@ -82,6 +82,7 @@ set(SRCS
 
         0000/800/814_binary_tree_pruning.cpp
         0000/800/827_making_a_large_island.cpp
+        0000/800/837_new_21_game.cpp
         0000/800/838_push_dominoes.cpp
         0000/800/841_keys_and_rooms.cpp
         0000/800/886_possible_bipartition.cpp
