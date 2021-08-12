@@ -1,12 +1,14 @@
 set(SRCS
         0000/000/1_two_sum.cpp
         0000/000/2_add_two_numbers.cpp
+        0000/000/3_longest_substring_without_repeating_chars.cpp
         0000/000/4_median_of_two_sorted_arrays.cpp
         0000/000/14_longest_common_prefix.cpp
         0000/000/15_3_sum.cpp
         0000/000/16_3sum_closest.cpp
         0000/000/17_letter_combinations_of_a_phone_number.cpp
         0000/000/18_4_sum.cpp
+        0000/000/21_merge_two_sorted_lists.cpp
         0000/000/22_generate_parentheses.cpp
         0000/000/25_reverse_nodes_in_k_group.cpp
         0000/000/33_search_in_rotated_sorted_array.cpp
@@ -100,6 +102,7 @@ set(SRCS
         0000/800/895_max_freq_stack.cpp
 
         0000/900/915_partition_array_into_disjoint_intervals.cpp
+        0000/900/926_flip_string_to_monotone.cpp
         0000/900/927_three_equal_parts.cpp
         0000/900/932_beautiful_array.cpp
         0000/900/954_array_of_doubled_pairs.cpp
@@ -138,6 +141,7 @@ set(SRCS
         misc/OA_18_subtree_with_max_average.cpp
         misc/OA_21_two_sum_unique_pairs.cpp
         misc/OA_24_substr_of_size_k_with_k_distinct_char.cpp
+        misc/OA_30_optimal_utilization.cpp
         )
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
@@ -147,7 +151,7 @@ find_package(Catch2 REQUIRED)
 include(Catch)
 
 # Add Utils
-add_library(utils utils.cpp Tree.cpp)
+add_library(utils utils.cpp)
 target_link_libraries(utils CONAN_PKG::fmt)
 # Add Union Find
 add_library(union_find UnionFind.cpp)
