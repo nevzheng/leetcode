@@ -121,6 +121,7 @@ set(SRCS
         1000/1088_confusing_number_2.cpp
         1000/1143_longest_common_subsequence.cpp
         1000/1192_critical_connections_in_a_network.cpp
+        1000/1268_search_suggestion_system.cpp
         1000/1306_jump_game_iii.cpp
         1000/1315_sum_of_even_grandparents.cpp
         1000/1335_minimum_difficulty_of_job_schedule.cpp
@@ -157,11 +158,13 @@ target_link_libraries(utils CONAN_PKG::fmt)
 add_library(union_find UnionFind.cpp)
 # Add Tarjan Solver
 add_library(tarjan_solver TarjanSolver.cpp)
+# Add Trie
+add_library(trie Trie.hpp Trie.cpp)
 
 # Create Executables
 foreach (SRC ${SRCS})
     get_filename_component(BIN ${SRC} NAME_WE) # Grab Filename w/o path and extension
     add_executable(${BIN} ${SRC} main.cpp) # Catch main should be its own file to avoid recompilation
-    target_link_libraries(${BIN} PRIVATE CONAN_PKG::catch2 CONAN_PKG::fmt utils)
+    target_link_libraries(${BIN} PRIVATE CONAN_PKG::catch2 CONAN_PKG::fmt utils trie union_find tarjan_solver)
     catch_discover_tests(${BIN})
 endforeach ()
