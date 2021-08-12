@@ -46,6 +46,7 @@ class SolutionBruteForce {
  * the best match for each candidate.
  * Key Trick is to use upper bound and std::prev
  *
+ * Time: O(min(M,N)*lg(max(M,N)) time and constant space, ignore output storage
  */
 class Solution {
  public:
