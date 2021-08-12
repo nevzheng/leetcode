@@ -42,20 +42,19 @@ class Solution {
   static vector<vector<string>> suggestedProducts(vector<string>& products,
                                                   const string& searchWord) {
     std::sort(products.begin(), products.end());
+
+    int bs_start = 0;
+    int len = static_cast<int>(products.size());
     vector<vector<string>> ans;
-    auto bs_start = 0;
-    auto len = static_cast<int>(products.size());
     string prefix;
     for (auto c : searchWord) {
       prefix += c;
-      auto start =
-          static_cast<int>(std::lower_bound(products.begin() + bs_start,
-                                            products.end(), prefix) -
-                           products.begin());
-      ans.emplace_back();
-      for (auto i = start; i < min(start + 3, len) &&
-                           (products[i].compare(0, prefix.size(), prefix) == 0);
-           ++i) {
+      auto start_it =
+          std::lower_bound(products.begin() + bs_start, products.end(), prefix);
+      auto start = static_cast<int>(std::distance(products.begin(), start_it));
+      ans.emplace_back();  // push empty onto end
+      for (auto i = start; i < min(start + 3, len); ++i) {
+        if (products[i].compare(0, prefix.size(), prefix)) break;
         ans.back().push_back(products[i]);
       }
       bs_start = start;
