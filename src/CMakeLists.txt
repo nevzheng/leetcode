@@ -24,6 +24,7 @@ set(SRCS
         0000/000/59_spiral_matrix_2.cpp
         0000/000/70_climbing_stairs.cpp
         0000/000/72_edit_distance.cpp
+        0000/000/73_matrix_zeros.cpp
         0000/000/79_word_search.cpp
         0000/000/90_subsets_2.cpp
         0000/000/94_binary_tree_inorder_traversal.cpp
