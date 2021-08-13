@@ -106,6 +106,7 @@ set(SRCS
         0000/900/926_flip_string_to_monotone.cpp
         0000/900/927_three_equal_parts.cpp
         0000/900/932_beautiful_array.cpp
+        0000/900/937_reorder_data_in_log_files.cpp
         0000/900/954_array_of_doubled_pairs.cpp
         0000/900/957_prison_cell_after_n_days.cpp
         0000/900/968_binary_tree_cameras.cpp
