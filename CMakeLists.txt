@@ -17,5 +17,9 @@ if (NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
             "${CMAKE_BINARY_DIR}/conan.cmake")
 endif ()
 
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+add_subdirectory(utils)
 include_directories(include)
 add_subdirectory(src)

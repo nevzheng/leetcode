@@ -1,0 +1,11 @@
+# Add Solutions
+add_subdirectory(000)
+add_subdirectory(100)
+add_subdirectory(200)
+add_subdirectory(300)
+add_subdirectory(400)
+add_subdirectory(500)
+add_subdirectory(600)
+add_subdirectory(700)
+add_subdirectory(800)
+add_subdirectory(900)
