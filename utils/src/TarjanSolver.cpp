@@ -6,7 +6,7 @@
 // Created by Nevin Zheng on 7/25/21.
 //
 
-#include "../include/TarjanSolver.hpp"
+#include "TarjanSolver.hpp"
 
 TarjanSolver::TarjanSolver(int nVertices, AdjList graph)
     : n_vertices_(nVertices),

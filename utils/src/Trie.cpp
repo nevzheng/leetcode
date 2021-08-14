@@ -6,7 +6,7 @@
 // Created by Nevin Zheng on 8/12/21.
 //
 
-#include "../include/Trie.hpp"
+#include "Trie.hpp"
 
 namespace trie {
 Node* Node::get_child(char c) { return children_.at(c - 'a').get(); }
