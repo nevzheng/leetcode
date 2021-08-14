@@ -145,6 +145,7 @@ set(SRCS
         misc/OA_21_two_sum_unique_pairs.cpp
         misc/OA_24_substr_of_size_k_with_k_distinct_char.cpp
         misc/OA_30_optimal_utilization.cpp
+        misc/OA_shopping_options.cpp
         )
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
