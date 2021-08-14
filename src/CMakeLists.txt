@@ -72,6 +72,7 @@ set(SRCS
         0000/400/416_partition_equal_subset_sum.cpp
         0000/400/427_concatenated_words.cpp
         0000/400/429_nary_tree_level_order_traversal.cpp
+        0000/400/454_4sum_2.cpp
 
         0000/500/508_most_frequent_subtree_sum.cpp
         0000/500/513_find_bottom_left_tree_value.cpp
