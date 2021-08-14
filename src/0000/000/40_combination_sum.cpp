@@ -7,48 +7,68 @@
 
 using namespace std;
 
-using Vec2D = vector<vector<int>>;
-void combination_sum2(Vec2D &ans, vector<int> curr, const vector<int> &A, int idx, int tgt) {
-    if (tgt == 0) {
-        sort(begin(curr), end(curr));
-        return ans.push_back(curr);
-    };
-    if (tgt < 0 or idx >= A.size()) return;      // Went too far;
-    combination_sum2(ans, curr, A, idx + 1, tgt);// Exclude idx
-    curr.push_back(A[idx]);
-    combination_sum2(ans, curr, A, idx + 1, tgt - A[idx]);// Include idx
-}
+class Solution {
+ public:
+  void dfs(const vector<int>& A, vector<int>& cur, int tgt, int idx,
+           vector<vector<int>>& ans) {
+    if (tgt == 0) return ans.push_back(cur);
+    for (auto nxt = idx; nxt < static_cast<int>(A.size()); ++nxt) {
+      if (nxt != idx && A[nxt] == A[nxt - 1]) continue;
+      if (tgt - A[nxt] < 0) break;
+      cur.push_back(A[nxt]);
+      dfs(A, cur, tgt - A[nxt], nxt + 1, ans);
+      cur.pop_back();
+    }
+  }
 
-Vec2D combinationSum2(vector<int> &A, int tgt) {
-    // Do a sanity check
-    if (accumulate(begin(A), end(A), 0) < tgt) return {};
-    // Do Some Additional Pruning;
-    // If there are larger elements in the array, they'll be excluded quickly
+  vector<vector<int>> combinationSum2(vector<int>& A, int tgt) {
     vector<vector<int>> ans;
-    combination_sum2(ans, {}, A, 0, tgt);
-    sort(begin(ans), end(ans));
-    ans.erase(unique(begin(ans), end(ans)), end(ans));
+    vector<int> cur;
+    std::sort(A.begin(), A.end());
+    dfs(A, cur, tgt, 0, ans);
     return ans;
-}
-
+  }
+};
 
 TEST_CASE("40ex1", "[40]") {
-    vector<int> input = {10, 1, 2, 7, 6, 1, 5};
-    auto tgt = 8;
-    vector<vector<int>> expected = {{1, 1, 6}, {1, 2, 5}, {1, 7}, {2, 6}};
-    REQUIRE(combinationSum2(input, tgt) == expected);
+  vector<int> input = {10, 1, 2, 7, 6, 1, 5};
+  auto tgt = 8;
+  vector<vector<int>> expected = {{1, 1, 6}, {1, 2, 5}, {1, 7}, {2, 6}};
+  REQUIRE(Solution().combinationSum2(input, tgt) == expected);
 }
 
 TEST_CASE("40ex2", "[40]") {
-    vector<int> input = {2, 5, 2, 1, 2};
-    auto tgt = 5;
-    vector<vector<int>> expected = {{1, 2, 2}, {5}};
-    REQUIRE(combinationSum2(input, tgt) == expected);
+  vector<int> input = {2, 5, 2, 1, 2};
+  auto tgt = 5;
+  vector<vector<int>> expected = {{1, 2, 2}, {5}};
+  REQUIRE(Solution().combinationSum2(input, tgt) == expected);
 }
 
 TEST_CASE("40ex3", "[40]") {
-    vector<int> input = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    auto tgt = 27;
-    vector<vector<int>> expected = {};
-    REQUIRE(combinationSum2(input, tgt) == expected);
+  vector<int> input = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+  auto tgt = 27;
+  vector<vector<int>> expected = {};
+  REQUIRE(Solution().combinationSum2(input, tgt) == expected);
+}
+
+TEST_CASE("40ex4", "[40]") {
+  vector<int> input = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+  auto tgt = 30;
+  vector<vector<int>> expected = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                                   1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                                   1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+  REQUIRE(Solution().combinationSum2(input, tgt) == expected);
+}
+
+TEST_CASE("40ex5", "[40]") {
+  vector<int> input = {1, 2};
+  auto tgt = 4;
+  vector<vector<int>> expected = {};
+  REQUIRE(Solution().combinationSum2(input, tgt) == expected);
 }
