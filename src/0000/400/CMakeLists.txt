@@ -1,4 +1,5 @@
 set(SRCS
+        404_sum_of_left_leaves.cpp
         415_add_strings.cpp
         416_partition_equal_subset_sum.cpp
         427_concatenated_words.cpp
