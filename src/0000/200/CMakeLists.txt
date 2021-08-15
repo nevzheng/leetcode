@@ -7,6 +7,7 @@ set(SRCS
         213_house_robber_2.cpp
         216_combination_sum_3.cpp
         221_maximal_square.cpp
+        236_lca_bt.cpp
         257_binary_tree_paths.cpp
         268_missing_number.cpp
         269_alien_dictionary.cpp
