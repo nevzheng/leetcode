@@ -27,6 +27,7 @@ set(SRCS
         70_climbing_stairs.cpp
         72_edit_distance.cpp
         73_matrix_zeros.cpp
+        77_combinations.cpp
         79_word_search.cpp
         90_subsets_2.cpp
         94_binary_tree_inorder_traversal.cpp
