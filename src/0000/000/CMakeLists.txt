@@ -24,6 +24,7 @@ set(SRCS
         53_max_subarray.cpp
         54_spiral_matrix.cpp
         59_spiral_matrix_2.cpp
+        62_unique_paths.cpp
         70_climbing_stairs.cpp
         72_edit_distance.cpp
         73_matrix_zeros.cpp
@@ -32,6 +33,7 @@ set(SRCS
         79_word_search.cpp
         90_subsets_2.cpp
         94_binary_tree_inorder_traversal.cpp
+        98_validate_binary_search_tree.cpp
         )
 # Add Catch2 Definition
 include(Catch)
