@@ -17,6 +17,8 @@ set(SRCS
         41_first_missing_positive.cpp
         42_trapping_rain_water.cpp
         45_jump_game_2.cpp
+        46_permutations.cpp
+        47_permutations_2.cpp
         49_group_anagrams.cpp
         50_power.cpp
         53_max_subarray.cpp
