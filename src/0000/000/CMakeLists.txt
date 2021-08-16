@@ -34,6 +34,8 @@ set(SRCS
         79_word_search.cpp
         90_subsets_2.cpp
         94_binary_tree_inorder_traversal.cpp
+        95_unique_bst_2.cpp
+        96_unique_bst.cpp
         98_validate_binary_search_tree.cpp
         )
 # Add Catch2 Definition
