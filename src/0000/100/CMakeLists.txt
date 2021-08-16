@@ -8,6 +8,7 @@ set(SRCS
         124_binary_tree_max_path_value.cpp
         126_word_ladder2.cpp
         127_word_ladder.cpp
+        130_surrounded_regions.cpp
         133_clone_graph.cpp
         138_copy_list_with_random_pointer.cpp
         139_word_break.cpp
