@@ -3,6 +3,7 @@ set(SRCS
         2_add_two_numbers.cpp
         3_longest_substring_without_repeating_chars.cpp
         4_median_of_two_sorted_arrays.cpp
+        5_longest_palindromic_substring.cpp
         14_longest_common_prefix.cpp
         15_3_sum.cpp
         16_3sum_closest.cpp
