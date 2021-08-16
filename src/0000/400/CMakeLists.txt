@@ -4,6 +4,7 @@ set(SRCS
         416_partition_equal_subset_sum.cpp
         427_concatenated_words.cpp
         429_nary_tree_level_order_traversal.cpp
+        443_string_compression.cpp
         454_4sum_2.cpp
         )
 # Add Catch2 Definition
