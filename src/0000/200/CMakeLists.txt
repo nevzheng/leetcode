@@ -9,6 +9,7 @@ set(SRCS
         221_maximal_square.cpp
         222_count_complete_tree_nodes.cpp
         236_lca_bt.cpp
+        242_valid_anagram.cpp
         257_binary_tree_paths.cpp
         268_missing_number.cpp
         269_alien_dictionary.cpp
