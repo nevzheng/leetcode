@@ -1,12 +1,12 @@
 set(SRCS
         600_non_negative_integers_without_consecutive_ones.cpp
         611_valid_triangle_number.cpp
+        639_decode_ways_2.cpp
         662_maximum_width_of_binary_tree.cpp
         677_map_sum_pairs.cpp
         684_redundant_connection.cpp
         685_redundant_connection_2.cpp
         692_top_k_frequent_words.cpp
-
         )
 # Add Catch2 Definition
 include(Catch)

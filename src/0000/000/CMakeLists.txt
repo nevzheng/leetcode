@@ -34,6 +34,7 @@ set(SRCS
         77_combinations.cpp
         79_word_search.cpp
         90_subsets_2.cpp
+        91_decode_ways.cpp
         94_binary_tree_inorder_traversal.cpp
         95_unique_bst_2.cpp
         96_unique_bst.cpp
