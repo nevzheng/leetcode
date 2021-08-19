@@ -7,6 +7,7 @@ set(SRCS
         838_push_dominoes.cpp
         841_keys_and_rooms.cpp
         849_max_dist_to_closest_person.cpp
+        857_minimum_cost_to_hire_k_workers.cpp
         877_stone_game.cpp
         886_possible_bipartition.cpp
         895_max_freq_stack.cpp
