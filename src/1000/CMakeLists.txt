@@ -12,6 +12,7 @@ set(SRCS
         1306_jump_game_iii.cpp
         1315_sum_of_even_grandparents.cpp
         1335_minimum_difficulty_of_job_schedule.cpp
+        1339_maximum_product_bt.cpp
         1462_course_schedule_iv.cpp
         1448_count_good_nodes_in_bt.cpp
         1584_min_cost_to_connect_all_edges.cpp
