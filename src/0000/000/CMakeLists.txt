@@ -35,6 +35,7 @@ set(SRCS
         76_minimum_window_substring.cpp
         77_combinations.cpp
         79_word_search.cpp
+        84_largest_rectangle_in_histogram.cpp
         90_subsets_2.cpp
         91_decode_ways.cpp
         94_binary_tree_inorder_traversal.cpp
