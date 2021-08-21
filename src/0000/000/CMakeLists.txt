@@ -15,6 +15,7 @@ set(SRCS
         28_strstr.cpp
         33_search_in_rotated_sorted_array.cpp
         36_valid_sudoku.cpp
+        37_sudoku_solver.cpp
         39_combination_sum.cpp
         40_combination_sum.cpp
         41_first_missing_positive.cpp
