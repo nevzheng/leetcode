@@ -8,6 +8,7 @@ set(SRCS
         216_combination_sum_3.cpp
         221_maximal_square.cpp
         222_count_complete_tree_nodes.cpp
+        223_rectangle_area.cpp
         236_lca_bt.cpp
         242_valid_anagram.cpp
         257_binary_tree_paths.cpp
