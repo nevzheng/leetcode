@@ -6,6 +6,7 @@ set(SRCS
         212_word_search_ii.cpp
         213_house_robber_2.cpp
         216_combination_sum_3.cpp
+        218_skyline_problem.cpp
         221_maximal_square.cpp
         222_count_complete_tree_nodes.cpp
         223_rectangle_area.cpp
