@@ -2,6 +2,7 @@ set(SRCS
         600_non_negative_integers_without_consecutive_ones.cpp
         611_valid_triangle_number.cpp
         639_decode_ways_2.cpp
+        653_two_sum_iv.cpp
         662_maximum_width_of_binary_tree.cpp
         677_map_sum_pairs.cpp
         684_redundant_connection.cpp
