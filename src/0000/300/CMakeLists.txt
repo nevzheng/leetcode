@@ -1,6 +1,7 @@
 set(SRCS
         303_range_sum_query_immutable.cpp
         329_longest_increasing_path_in_a_matrix.cpp
+        331_verify_preorder_serialization_binary_tree.cpp
         337_house_robber_3.cpp
         347_top_k_frequent_elements.cpp
         377_combination_sum_iv.cpp

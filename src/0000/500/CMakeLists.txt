@@ -2,6 +2,7 @@ set(SRCS
         508_most_frequent_subtree_sum.cpp
         513_find_bottom_left_tree_value.cpp
         516_longest_palindromic_subsequence.cpp
+        522_longest_uncommon_subsequence_2.cpp
         537_complex_number_multiplication.cpp
         542_01_matrix.cpp
         543_diameter_of_binary_tree.cpp
