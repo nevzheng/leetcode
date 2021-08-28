@@ -8,6 +8,7 @@ set(SRCS
         1088_confusing_number_2.cpp
         1143_longest_common_subsequence.cpp
         1192_critical_connections_in_a_network.cpp
+        1235_maximum_profit_in_job_scheduling.cpp
         1268_search_suggestion_system.cpp
         1306_jump_game_iii.cpp
         1315_sum_of_even_grandparents.cpp
