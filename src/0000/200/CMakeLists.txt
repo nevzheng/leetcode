@@ -15,6 +15,7 @@ set(SRCS
         257_binary_tree_paths.cpp
         268_missing_number.cpp
         269_alien_dictionary.cpp
+        278_first_bad_version.cpp
         295_find_median_from_data_stream.cpp
         )
 # Add Catch2 Definition
