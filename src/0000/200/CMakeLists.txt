@@ -16,6 +16,7 @@ set(SRCS
         268_missing_number.cpp
         269_alien_dictionary.cpp
         278_first_bad_version.cpp
+        283_move_zeros.cpp
         295_find_median_from_data_stream.cpp
         )
 # Add Catch2 Definition
