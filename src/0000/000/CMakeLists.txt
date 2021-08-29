@@ -28,6 +28,7 @@ set(SRCS
         50_power.cpp
         53_max_subarray.cpp
         54_spiral_matrix.cpp
+        56_merge_intervals.cpp
         59_spiral_matrix_2.cpp
         62_unique_paths.cpp
         70_climbing_stairs.cpp
