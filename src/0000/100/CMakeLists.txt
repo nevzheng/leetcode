@@ -19,6 +19,7 @@ set(SRCS
         162_find_peak_element.cpp
         167_two_sum_2.cpp
         174_dungeon_game.cpp
+        189_rotate_array.cpp
         198_house_robber.cpp
         199_binary_tree_right_side_view.cpp
         )
