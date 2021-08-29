@@ -14,6 +14,7 @@ set(SRCS
         242_valid_anagram.cpp
         256_paint_house.cpp
         257_binary_tree_paths.cpp
+        261_graph_valid_tree.cpp
         265_paint_house_2.cpp
         268_missing_number.cpp
         269_alien_dictionary.cpp
