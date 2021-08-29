@@ -1,5 +1,6 @@
 set(SRCS
         five_star_sellers.cpp
+        longest_vowel_string.cpp
         min_cost_to_repair_edges.cpp
 
         OA_movies_on_a_flight.cpp
