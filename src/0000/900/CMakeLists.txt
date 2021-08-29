@@ -7,6 +7,7 @@ set(SRCS
         954_array_of_doubled_pairs.cpp
         957_prison_cell_after_n_days.cpp
         968_binary_tree_cameras.cpp
+        977_squares_of_a_sorted_array.cpp
         987_vertical_order_traversal_of_a_binary_tree.cpp
         988_smallest_string_starting_from_leaf.cpp
         994_rotting_oranges.cpp
