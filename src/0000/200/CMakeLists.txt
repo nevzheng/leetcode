@@ -12,7 +12,9 @@ set(SRCS
         223_rectangle_area.cpp
         236_lca_bt.cpp
         242_valid_anagram.cpp
+        256_paint_house.cpp
         257_binary_tree_paths.cpp
+        265_paint_house_2.cpp
         268_missing_number.cpp
         269_alien_dictionary.cpp
         278_first_bad_version.cpp
