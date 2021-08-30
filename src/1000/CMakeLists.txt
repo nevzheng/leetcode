@@ -6,6 +6,7 @@ set(SRCS
         1056_confusing_number.cpp
         1057_campus_bikes.cpp
         1088_confusing_number_2.cpp
+        1038_bst_to_greater_sum_tree.cpp
         1143_longest_common_subsequence.cpp
         1192_critical_connections_in_a_network.cpp
         1235_maximum_profit_in_job_scheduling.cpp
