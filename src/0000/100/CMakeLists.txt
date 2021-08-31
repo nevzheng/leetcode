@@ -16,6 +16,7 @@ set(SRCS
         144_preorder_traversal.cpp
         145_binary_tree_postorder_traversal.cpp
         146_lru_cache.cpp
+        153_min_in_rotated_sorted_array.cpp
         162_find_peak_element.cpp
         167_two_sum_2.cpp
         174_dungeon_game.cpp
