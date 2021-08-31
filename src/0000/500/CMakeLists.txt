@@ -8,6 +8,7 @@ set(SRCS
         543_diameter_of_binary_tree.cpp
         546_remove_boxes.cpp
         572_subtree_of_another_tree.cpp
+        598_range_addition_2.cpp
         )
 # Add Catch2 Definition
 include(Catch)
