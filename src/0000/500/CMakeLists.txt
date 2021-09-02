@@ -9,6 +9,7 @@ set(SRCS
         546_remove_boxes.cpp
         557_reverse_words_in_a_string_iii.cpp
         565_array_nesting.cpp
+        567_permutation_in_string.cpp
         572_subtree_of_another_tree.cpp
         598_range_addition_2.cpp
         )
