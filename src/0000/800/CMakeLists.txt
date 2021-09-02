@@ -10,6 +10,7 @@ set(SRCS
         850_rectangle_area_2.cpp
         857_minimum_cost_to_hire_k_workers.cpp
         877_stone_game.cpp
+        876_middle_of_linked_list.cpp
         886_possible_bipartition.cpp
         895_max_freq_stack.cpp
         )
