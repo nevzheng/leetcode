@@ -9,6 +9,7 @@ set(SRCS
         16_3sum_closest.cpp
         17_letter_combinations_of_a_phone_number.cpp
         18_4_sum.cpp
+        19_remove_nth_node_from_end_of_list.cpp
         21_merge_two_sorted_lists.cpp
         22_generate_parentheses.cpp
         25_reverse_nodes_in_k_group.cpp

@@ -4,6 +4,7 @@ set(SRCS
         330_patching_array.cpp
         331_verify_preorder_serialization_binary_tree.cpp
         337_house_robber_3.cpp
+        344_reverse_string.cpp
         347_top_k_frequent_elements.cpp
         377_combination_sum_iv.cpp
         394_decode_string.cpp
