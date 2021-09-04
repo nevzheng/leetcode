@@ -3,6 +3,7 @@ set(SRCS
         819_most_common_word.cpp
         827_making_a_large_island.cpp
         833_find_and_replace_in_string.cpp
+        834_sum_of_distances_in_tree.cpp
         837_new_21_game.cpp
         838_push_dominoes.cpp
         841_keys_and_rooms.cpp
