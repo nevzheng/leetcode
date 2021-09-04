@@ -7,8 +7,6 @@ set(SRCS
         662_maximum_width_of_binary_tree.cpp
         663_equal_tree_partition.cpp
         677_map_sum_pairs.cpp
-        684_redundant_connection.cpp
-        685_redundant_connection_2.cpp
         692_top_k_frequent_words.cpp
         )
 # Add Catch2 Definition
