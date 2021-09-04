@@ -11,6 +11,7 @@ set(SRCS
         565_array_nesting.cpp
         567_permutation_in_string.cpp
         572_subtree_of_another_tree.cpp
+        587_erect_the_fence.cpp
         598_range_addition_2.cpp
         )
 # Add Catch2 Definition
