@@ -14,6 +14,7 @@ set(SRCS
         876_middle_of_linked_list.cpp
         886_possible_bipartition.cpp
         895_max_freq_stack.cpp
+        899_orderly_queue.cpp
         )
 # Add Catch2 Definition
 include(Catch)
