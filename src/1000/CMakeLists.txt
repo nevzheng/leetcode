@@ -19,6 +19,7 @@ set(SRCS
         1462_course_schedule_iv.cpp
         1448_count_good_nodes_in_bt.cpp
         1584_min_cost_to_connect_all_edges.cpp
+        1629_slowest_key.cpp
         1669_merge_inbetween_linked_lists.cpp
         1702_maximum_binary_string_after_change.cpp
         1798_max_consecutive_values_you_can_make.cpp
