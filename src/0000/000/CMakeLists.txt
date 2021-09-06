@@ -13,6 +13,7 @@ set(SRCS
         21_merge_two_sorted_lists.cpp
         22_generate_parentheses.cpp
         25_reverse_nodes_in_k_group.cpp
+        26_remove_duplicates_from_sorted.cpp
         28_strstr.cpp
         33_search_in_rotated_sorted_array.cpp
         35_search_insert_position.cpp
