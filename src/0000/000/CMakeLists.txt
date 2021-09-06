@@ -29,6 +29,7 @@ set(SRCS
         49_group_anagrams.cpp
         50_power.cpp
         51_n_queens.cpp
+        52_n_queens_2.cpp
         53_max_subarray.cpp
         54_spiral_matrix.cpp
         56_merge_intervals.cpp
