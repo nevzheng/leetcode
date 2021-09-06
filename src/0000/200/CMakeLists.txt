@@ -1,6 +1,7 @@
 set(SRCS
         200_number_of_islands.cpp
         205_isomorphic_strings.cpp
+        206_reverse_linked_list.cpp
         207_course_schedule.cpp
         210_course_schedule_ii.cpp
         212_word_search_ii.cpp
