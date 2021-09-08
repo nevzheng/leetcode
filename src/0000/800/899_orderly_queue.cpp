@@ -22,10 +22,14 @@ class Solution {
     if (k == 0) return s;  // no move possible
     auto cur = s;
     // Rotate Min Element to front
-    if (k == 1)
-      std::rotate(cur.begin(), std::min_element(cur.begin(), cur.end()),
-                  cur.end());
-    if (k >= 2) std::sort(cur.begin(), cur.end());
+    if (k == 1) {
+      string ans = s;
+      for (auto i = 1UL; i < s.size(); ++i) {
+        ans = min(ans, s.substr(i) + s.substr(0, i));
+      }
+      return ans;
+    }
+    std::sort(cur.begin(), cur.end());
     return cur;
   }
 };
