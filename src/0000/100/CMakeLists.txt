@@ -5,6 +5,7 @@ set(SRCS
         114_flatten_binary_tree_to_linked_list.cpp
         116_populating_next_right_pointers_in_each_node_1.cpp
         117_populating_next_right_pointers_in_each_node_2.cpp
+        120_triangle.cpp
         124_binary_tree_max_path_value.cpp
         126_word_ladder2.cpp
         127_word_ladder.cpp
