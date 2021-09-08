@@ -7,6 +7,7 @@ set(SRCS
         837_new_21_game.cpp
         838_push_dominoes.cpp
         841_keys_and_rooms.cpp
+        848_shifting_letters.cpp
         849_max_dist_to_closest_person.cpp
         850_rectangle_area_2.cpp
         857_minimum_cost_to_hire_k_workers.cpp
