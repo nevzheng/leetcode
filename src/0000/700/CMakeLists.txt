@@ -1,5 +1,6 @@
 set(SRCS
         703_kth_largest_element_in_a_stream.cpp
+        725_split_linked_list_in_parts.cpp
         784_letter_case_permutation.cpp
         785_is_graph_bipartite.cpp
         787_cheapest_flights_within_k_stops.cpp
