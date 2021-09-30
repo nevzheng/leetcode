@@ -9,6 +9,7 @@ set(SRCS
         663_equal_tree_partition.cpp
         677_map_sum_pairs.cpp
         692_top_k_frequent_words.cpp
+        698_partition_to_k_equal_sum_subsets.cpp
         )
 # Add Catch2 Definition
 include(Catch)
