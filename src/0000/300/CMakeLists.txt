@@ -1,4 +1,5 @@
 set(SRCS
+        300_longest_increasing_subsequence.cpp
         303_range_sum_query_immutable.cpp
         329_longest_increasing_path_in_a_matrix.cpp
         330_patching_array.cpp
