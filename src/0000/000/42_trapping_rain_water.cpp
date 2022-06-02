@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// This monotonic stack solution works. but is bullshit
 // class Solution {
 //  public:
 //   static int trap(const vector<int>& H) {
@@ -38,6 +39,29 @@ using namespace std;
 //                                    return min(L, R) - H[idx];
 //                                  });
 //   }
+// };
+
+// you just to scan over the other elements
+// class Solution {
+// public:
+//     int trap(vector<int>& H) {
+//         if(H.empty()) return 0;
+//         int n = size(H);
+//         std::vector<int> L(n, 0), R(n, 0);
+//         for(auto i=1; i< n;++i){
+//             L[i] = std::max(L[i-1], H[i-1]);
+//         }  
+//         for(int i=n-2; i>=0; --i){
+//             R[i] = std::max(R[i+1], H[i+1]);
+//         }
+//         auto ans = 0;
+//         for(auto i=0; i<n; ++i) {
+//             auto mx = std::min(L[i], R[i]);
+//             auto cur = mx - H[i];
+//             ans +=  cur >= 0 ? cur : 0;
+//         }
+//         return ans;
+//     }
 // };
 
 class Solution {

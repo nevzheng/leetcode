@@ -1,6 +1,7 @@
 set(SRCS
         300_longest_increasing_subsequence.cpp
         303_range_sum_query_immutable.cpp
+        322_coin_change.cpp
         329_longest_increasing_path_in_a_matrix.cpp
         330_patching_array.cpp
         331_verify_preorder_serialization_binary_tree.cpp

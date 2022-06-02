@@ -33,6 +33,9 @@ class Solution {
     int N = size(a);
     std::vector<int> dp(N + 1, kInf);
     dp.front() = -kInf;
+    // reconstruction tips
+    // idx[i] is the index of dp[i]
+    // p[i] is the idx predecessor of optimal subseq ending at i
 
     for (auto i = 0; i < N; ++i) {  // Evaluate prefix arrays in sequence
       // Find the longest sequence a[i] can extend

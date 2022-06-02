@@ -1,5 +1,6 @@
 set(SRCS
         string_distance.cpp
+        ksorted.cpp
         )
 
 # Add Catch2 Definition

@@ -35,49 +35,49 @@ using namespace std;
  * This implementation of strStr uses KMP and runs in O(m+n) time and O(n)
  * space. Where m is the size of the haystack and n the size of the needle
  */
-// class Solution {
-//  public:
-//   static vector<int> computeLPS(const string& w) {
-//     auto size = static_cast<int>(w.size());
-//     vector<int> lps(size);
-//     lps[0] = 0;
-//     auto i = 0;
-//     auto j = 1;
-//     while (j < size) {
-//       if (w[j] == w[i]) {
-//         lps[j++] = ++i;
-//       } else {
-//         if (i != 0) {
-//           i = lps[i - 1];
-//         } else {
-//           lps[j++] = 0;
-//         }
-//       }
-//     }
-//     return lps;
-//   }
-//
-//   static int strStr(const string& haystack, const string& needle) {
-//     if (needle.empty()) return 0;
-//     auto M = haystack.size();
-//     auto N = needle.size();
-//     auto lps = computeLPS(needle);
-//     auto h = 0UL;
-//     auto n = 0UL;
-//
-//     while (h < M) {
-//       if (haystack[h] == needle[n]) ++h, ++n;  // Increment both indices
-//       if (n == N) return h - n;                // return first occurence
-//       if (n < N && needle[n] != haystack[h]) {
-//         if (n != 0)
-//           n = lps[n - 1];
-//         else
-//           ++h;
-//       }
-//     }
-//     return -1;
-//   }
-// };
+class KMPSolution {
+ public:
+  static vector<int> computeLPS(const string& w) {
+    auto size = static_cast<int>(w.size());
+    vector<int> lps(size);
+    lps[0] = 0;
+    auto i = 0;
+    auto j = 1;
+    while (j < size) {
+      if (w[j] == w[i]) {
+        lps[j++] = ++i;
+      } else {
+        if (i != 0) {
+          i = lps[i - 1];
+        } else {
+          lps[j++] = 0;
+        }
+      }
+    }
+    return lps;
+  }
+
+  static int strStr(const string& haystack, const string& needle) {
+    if (needle.empty()) return 0;
+    auto M = haystack.size();
+    auto N = needle.size();
+    auto lps = computeLPS(needle);
+    auto h = 0UL;
+    auto n = 0UL;
+
+    while (h < M) {
+      if (haystack[h] == needle[n]) ++h, ++n;  // Increment both indices
+      if (n == N) return h - n;                // return first occurence
+      if (n < N && needle[n] != haystack[h]) {
+        if (n != 0)
+          n = lps[n - 1];
+        else
+          ++h;
+      }
+    }
+    return -1;
+  }
+};
 
 /**
  * This implementation of strStr uses Rabin Karp
@@ -110,8 +110,7 @@ class Solution {
       // Match, Check String
       if (p == t and haystack.compare(s, m_len, needle) == 0) return s;
       // updating hash: pop front char, push new
-      if (s < h_len - m_len)
-        t = (d * (t - haystack[s] * h) + haystack[s + m_len]) % q;
+      if (s < h_len - m_len) t = (d * (t - haystack[s] * h) + haystack[s + m_len]) % q;
     }
     return -1;
   }

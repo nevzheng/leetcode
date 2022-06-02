@@ -100,3 +100,46 @@ TEST_CASE("73::2", "[73]") {
   Solution::setZeroes(matrix);
   REQUIRE(matrix == expected);
 }
+
+
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& A) {
+        auto R = size(A);
+        auto C = size(A.front());
+        bool isCol = false; // whether the first col needs to be set
+        
+        for(auto i=0; i<R; ++i){
+            if(A[i][0] == 0) isCol = true;
+            for(auto j=1; j < C; ++j) {
+                if(A[i][j] == 0){
+                    A[i][0] = 0;
+                    A[0][j] = 0;
+                }
+            }
+        }
+        
+        // Fill in the rows and cols
+        for(auto i=1; i< R; ++i){
+            for(auto j=1; j<C; ++j){
+                if(A[i][0]==0 || A[0][j] == 0) {
+                    A[i][j] = 0;
+                }
+            }
+        }
+        
+        // Check if the first row needs to be set
+        if(A[0][0] == 0){
+            for(auto i=0; i< C; ++i){
+                A[0][i] = 0;
+            }
+        }
+        
+        if(isCol) {
+            for(auto i=0; i<R;++i){
+                A[i][0] = 0;
+            }
+        }
+        
+    }
+};
